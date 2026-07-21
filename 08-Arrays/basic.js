@@ -13,9 +13,9 @@ const myArr2 = new Array(1, 2, 3, 4)
 // Array methods
 
 // myArr.push(6)
-let fruits = ["Apple", "Banana"];
+// let fruits = ["Apple", "Banana"];
 
-fruits.push("Orange");
+// fruits.push("Orange");
 
 //console.log(fruits);
 
@@ -26,9 +26,9 @@ fruits.push("Orange");
 // myArr.shift() //Removes the first element.
 
 // Checking if smthg is in Array 
-let fruits = ["Apple", "Banana"];
+// let fruits = ["Apple", "Banana"];
 
-console.log(Array.isArray(fruits));
+// console.log(Array.isArray(fruits));
 
 
 // console.log(myArr.includes(9));
@@ -47,12 +47,30 @@ console.log(fruits.join(" - "));
 
 //Loop through an Array
 
-let fruits = ["Apple" , "Banana" , "Mango"];
+// let fruits = ["Apple" , "Banana" , "Mango"];
 
-for(let i = 0; i < fruits.length; i++)
+// for(let i = 0; i < fruits.length; i++)
+// {
+//     console.log(fruits[i]);
+// }
+
+
+//for...of Loop
+let fruit = ["Apple","Banana","Orange"];
+
+for(let fr of fruit)
 {
-    console.log(fruits[i]);
+    console.log(fr);
 }
+
+// Primitive vs Reference
+let arr1 = [1,2,3];
+
+let arr2 = arr1;
+
+arr2.push(4);
+
+console.log(arr1);
 
 // slice, splice
 
@@ -68,3 +86,25 @@ for(let i = 0; i < fruits.length; i++)
 // console.log("C ", myArr);
 // console.log(myn2);
 
+
+/*
+Most Important Array Methods
+Method	Purpose
+push()	Add at end
+pop()	Remove from end
+shift()	Remove from beginning
+unshift()	Add at beginning
+length	Total elements
+join()	Convert to string
+includes()	Check if value exists
+indexOf()	Find index
+slice()	Copy part of array (original unchanged)
+splice()	Add/remove elements (original changes)
+concat()	Merge arrays
+reverse()	Reverse array
+sort()	Sort array
+forEach()	Execute function for each element
+map()	Create a new transformed array
+filter()	Select matching elements
+reduce()	Combine values into one result
+*/
