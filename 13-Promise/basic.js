@@ -35,7 +35,7 @@ promiseONe
 
 const promisetwo = new Promise(function (resolve, reject) {
     setTimeout(() => {
-        
+
     }, 1000)
 })
 
@@ -45,38 +45,50 @@ const promisetwo = new Promise(function (resolve, reject) {
 const promisethree = new Promise(function (resolve, reject) {
     setTimeout(() => {
         console.log("Async Task 1 is completed");
-        resolve({username: "Mariam" , email: "mariam@example.com"});
+        resolve({ username: "Mariam", email: "mariam@example.com" });
     }, 1000)
 })
 
 //chaning
 promisethree
-.then((user) => {
-    console.log(user);
-    return user.username;
-})
-.then((name) => {
-    console.log(name);
-})
-.catch((err) => {
-    console.log("Error!");
-})
+    .then((user) => {
+        console.log(user);
+        return user.username;
+    })
+    .then((name) => {
+        console.log(name);
+    })
+    .catch((err) => {
+        console.log("Error!");
+    })
 
 
 //--------------------------------------------------------
 const promisefour = new Promise(function (resolve, reject) {
     setTimeout(() => {
         let error = true;
-        if(!error){
-            resolve({username: "Marry" , password: 123});
+        if (!error) {
+            resolve({ username: "Marry", password: 123 });
         }
-        else{
+        else {
             reject("ERROR!");
         }
     }, 1000)
 })
 
 //consume Promise
-
-
+promisefour
+    .then((user) => {
+        console.log(user);
+        return user.username;
+    })
+    .then((name) => {
+        console.log(name);
+    })
+    .catch((err) => {
+        console.log("Error!");
+    })
+    .finally(() => {
+        console.log("Promise is consumed or failed");
+    })
 
