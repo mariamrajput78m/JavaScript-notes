@@ -1,0 +1,24 @@
+// Promise Basic Structure
+
+const promiseOne = new Promise ( function()
+{
+
+})
+
+const promiseTwo = new Promise ( () => {
+
+})
+
+// this function contains two parameters 
+const promiseONe = new Promise ( function (resolve , reject)
+{
+    // Do any Async task here
+    // networking , cryptography 
+
+    setTimeout(() =>
+    {
+        console.log("Async Task 1 is completed");
+        
+
+    } , 1000)
+})
