@@ -20,11 +20,23 @@ const promiseONe = new Promise(function (resolve, reject) {
 })
 
 // then for Success
-promiseONe.then(function () {
-    console.log("Promise is Consumed");
-})
 
 // catch for failure
-promiseONe.catch(function () {
-    console.log("Promise is failed");
+
+// chain .then().catch() together
+promiseONe
+    .then(function () {
+        console.log("Promise is Consumed");
+    })
+    .catch(function () {
+        console.log("Promise is failed");
+    });
+
+// resolve with object
+const promisethree = new Promise(function (resolve, reject) {
+    setTimeout(() => {
+        console.log("Async Task 1 is completed");
+        resolve({username: "Mariam" , email: "mariam@example.com"});
+    }, 1000)
 })
+
