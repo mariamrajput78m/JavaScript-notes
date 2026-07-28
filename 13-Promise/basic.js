@@ -1,12 +1,12 @@
 // Promise Basic Structure
 
-const promiseOne = new Promise(function () {
+// const promise = new Promise(function () {
 
-})
+// })
 
-const promiseTwo = new Promise(() => {
+// const promiseTwo = new Promise(() => {
 
-})
+// })
 
 // this function contains two parameters 
 const promiseONe = new Promise(function (resolve, reject) {
@@ -15,7 +15,7 @@ const promiseONe = new Promise(function (resolve, reject) {
 
     setTimeout(() => {
         console.log("Async Task 1 is completed");
-        resolve();
+        reject();
     }, 1000)
 })
 
