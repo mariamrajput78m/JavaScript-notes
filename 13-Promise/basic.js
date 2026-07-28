@@ -40,3 +40,9 @@ const promisethree = new Promise(function (resolve, reject) {
     }, 1000)
 })
 
+promisethree
+.then((user) => {
+    console.log(user);
+    return user.username;
+})
+.then(())
