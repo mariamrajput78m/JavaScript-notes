@@ -18,7 +18,10 @@ const promiseONe = new Promise ( function (resolve , reject)
     setTimeout(() =>
     {
         console.log("Async Task 1 is completed");
-        
-
+        resolve();
     } , 1000)
+})
+
+promiseONe.then(function (){
+    console.log("Promise is Consumed")
 })
