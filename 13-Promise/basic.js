@@ -66,7 +66,7 @@ promisethree
 //--------------------------------------------------------
 const promisefour = new Promise(function (resolve, reject) {
     setTimeout(() => {
-        let error = true;
+        let error = false;
         if (!error) {
             resolve({ username: "Marry", password: 123 });
         }
