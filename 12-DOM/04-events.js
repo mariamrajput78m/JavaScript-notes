@@ -1,227 +1,160 @@
+// 1. Click Event
 const btn = document.getElementById("btn");
 
 btn.addEventListener("click", function () {
     alert("Button Clicked!");
 });
 
-
-// Arrow function 
-const btn = document.getElementById("btn");
-
+// 2. Arrow Function
 btn.addEventListener("click", () => {
     console.log("Button Clicked!");
 });
 
-
-//
+// 3. Change Text
 const heading = document.getElementById("title");
-const btn = document.getElementById("btn");
 
 btn.addEventListener("click", () => {
     heading.innerText = "Text Changed!";
 });
 
-
-//
-const btn = document.getElementById("btn");
-
+// 4. Change Background Color
 btn.addEventListener("click", () => {
     document.body.style.backgroundColor = "pink";
 });
 
-//
-const btn = document.getElementById("btn");
-
+// 5. Toggle Dark Mode
 btn.addEventListener("click", () => {
     document.body.classList.toggle("dark");
 });
-// .dark{
-//     background:black;
-//     color:white;
-// }
 
-
-//
-const btn = document.getElementById("btn");
-const heading = document.getElementById("title");
-
+// 6. Hide Element
 btn.addEventListener("click", () => {
     heading.style.display = "none";
 });
 
-
-//
+// 7. Show Element
 btn.addEventListener("click", () => {
     heading.style.display = "block";
 });
 
-
-//Toggle Visibility
+// 8. Toggle Visibility
 btn.addEventListener("click", () => {
-
     if (heading.style.display === "none") {
         heading.style.display = "block";
     } else {
         heading.style.display = "none";
     }
-
 });
 
-//8. Change CSS
+// 9. Change CSS
 btn.addEventListener("click", () => {
-
     heading.style.color = "red";
     heading.style.fontSize = "40px";
     heading.style.backgroundColor = "yellow";
-
 });
 
-//9. Mouse Over
+// 10. Mouse Over
 const box = document.getElementById("box");
 
 box.addEventListener("mouseover", () => {
-
     box.style.backgroundColor = "blue";
-
 });
 
-//10. Mouse Leave
+// 11. Mouse Leave
 box.addEventListener("mouseleave", () => {
-
     box.style.backgroundColor = "gray";
-
 });
 
-//11. Double Click
+// 12. Double Click
 btn.addEventListener("dblclick", () => {
-
     alert("Double Clicked");
-
 });
 
-//12. Right Click
+// 13. Right Click
 btn.addEventListener("contextmenu", (event) => {
-
     event.preventDefault();
-
     alert("Right Click Disabled");
-
 });
 
-//13. Keyboard Event
+// 14. Keyboard Event
 document.addEventListener("keydown", (event) => {
-
     console.log(event.key);
-
 });
 
-//14. Enter Key
+// 15. Enter Key
 document.addEventListener("keydown", (event) => {
-
     if (event.key === "Enter") {
         alert("Enter Pressed");
     }
-
 });
 
-//15. Input Event
-<input type="text" id="name">
+// 16. Input Event
 const input = document.getElementById("name");
 
 input.addEventListener("input", () => {
-
     console.log(input.value);
-
 });
 
-//16. Focus Event
-
+// 17. Focus Event
 input.addEventListener("focus", () => {
-
     input.style.backgroundColor = "lightyellow";
-
 });
 
-//17. Blur Event
+// 18. Blur Event
 input.addEventListener("blur", () => {
-
     input.style.backgroundColor = "white";
-
 });
 
-//18. Change Event
-<select id="country">
-    <option>Pakistan</option>
-    <option>India</option>
-    <option>USA</option>
-</select>
+// 19. Change Event
 const country = document.getElementById("country");
 
 country.addEventListener("change", () => {
-
     console.log(country.value);
-
 });
 
-//</input>19. Form Submit
-<form id="form">
-    <input type="text">
-    <button>Submit</button>
-</form>
+// 20. Form Submit
 const form = document.getElementById("form");
 
 form.addEventListener("submit", (event) => {
-
     event.preventDefault();
-
     console.log("Form Submitted");
-
 });
-20. Create Element
+
+// 21. Create Element
 const h2 = document.createElement("h2");
 
 h2.innerText = "Hello DOM";
 
 document.body.appendChild(h2);
-21. Remove Element
-const heading = document.getElementById("title");
 
-heading.remove();
-22. Toggle Class
+// 22. Remove Element
+// heading.remove();
+
+// 23. Toggle Class
 btn.addEventListener("click", () => {
-
     heading.classList.toggle("active");
-
 });
-23. Count Button Clicks
+
+// 24. Count Button Clicks
 let count = 0;
 
 btn.addEventListener("click", () => {
-
     count++;
-
     console.log(`Clicked ${count} times`);
-
 });
-24. Random Background Colour
+
+// 25. Random Background Colour
 const colors = ["red", "blue", "green", "orange", "purple"];
 
 btn.addEventListener("click", () => {
-
     const random = Math.floor(Math.random() * colors.length);
-
     document.body.style.backgroundColor = colors[random];
-
 });
-25. Live Character Counter
-<textarea id="message"></textarea>
-<p id="count">0</p>
+
+// 26. Live Character Counter
 const textarea = document.getElementById("message");
-const count = document.getElementById("count");
+const counter = document.getElementById("count");
 
 textarea.addEventListener("input", () => {
-
-    count.innerText = textarea.value.length;
-
+    counter.innerText = textarea.value.length;
 });
-
