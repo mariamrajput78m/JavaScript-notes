@@ -31,6 +31,15 @@ promiseONe
     .catch(function () {
         console.log("Promise is failed");
     });
+//--------------------------------------------------------
+
+const promisetwo = new Promise(function (resolve, reject) {
+    setTimeout(() => {
+        
+    }, 1000)
+})
+
+//--------------------------------------------------------
 
 // resolve with object
 const promisethree = new Promise(function (resolve, reject) {
@@ -40,6 +49,7 @@ const promisethree = new Promise(function (resolve, reject) {
     }, 1000)
 })
 
+//chaning
 promisethree
 .then((user) => {
     console.log(user);
@@ -51,6 +61,22 @@ promisethree
 .catch((err) => {
     console.log("Error!");
 })
-.finally(() => {
-    console.log("Promise is consumed or failed");
+
+
+//--------------------------------------------------------
+const promisefour = new Promise(function (resolve, reject) {
+    setTimeout(() => {
+        let error = true;
+        if(!error){
+            resolve({username: "Marry" , password: 123});
+        }
+        else{
+            reject("ERROR!");
+        }
+    }, 1000)
 })
+
+//consume Promise
+
+
+
