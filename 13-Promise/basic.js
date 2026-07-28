@@ -35,6 +35,13 @@ promiseONe
 
 const promisetwo = new Promise(function (resolve, reject) {
     setTimeout(() => {
+        let error = true;
+        if (!error) {
+            resolve({ username: "Javascript", CodeEidtor: "GitHub" });
+        }
+        else {
+            reject("ERROR! JS smthg went wrong");
+        }
 
     }, 1000)
 })
