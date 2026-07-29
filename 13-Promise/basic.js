@@ -45,4 +45,12 @@ promisethree
     console.log(user);
     return user.username;
 })
-.then(())
+.then((name) => {
+    console.log(name);
+})
+.catch((err) => {
+    console.log("Error!");
+})
+.finally(() => {
+    console.log("Promise is consumed or failed");
+})
