@@ -1,173 +1,198 @@
-=========================
-JAVASCRIPT FUNCTIONS
-=========================
+// =======================================
+// JAVASCRIPT FUNCTIONS
+// =======================================
 
-WHAT IS A FUNCTION?
+// A function is a reusable block of code.
+// Instead of writing the same code again and again,
+// we write it once and call it whenever needed.
 
-A function is a reusable block of code that performs a specific task.
 
-Instead of writing the same code again and again,
-we write it once inside a function and call it whenever needed.
 
----------------------------------------
+// =======================================
+// Example 1
+// Simple Function
+// =======================================
 
-Syntax
-
-function functionName() {
-
-    // code here
-
-}
-
-Example
-
+// Function Declaration
 function greet() {
+
+    // This line prints Hello on the console
     console.log("Hello!");
+
 }
 
+// Calling the function
 greet();
 
-Output:
-Hello!
 
----------------------------------------
 
-WHY USE FUNCTIONS?
 
-✔ Code Reusability
-✔ Cleaner Code
-✔ Easy to Read
-✔ Easy to Debug
 
----------------------------------------
+// =======================================
+// Example 2
+// Function with Parameters
+// =======================================
 
-FUNCTION WITH PARAMETERS
+// "name" is called a Parameter
+function greetUser(name){
 
-Parameters are variables that receive values.
-
-Example
-
-function greet(name) {
     console.log("Hello " + name);
-}
-
-greet("Mariam");
-
-Output:
-Hello Mariam
-
----------------------------------------
-
-ARGUMENTS
-
-Arguments are the actual values passed to a function.
-
-function add(a, b){
 
 }
 
-add(5,10);
+// "Mariam" is called an Argument
+greetUser("Mariam");
+greetUser("Ali");
+greetUser("Sara");
 
-Parameters → a, b
 
-Arguments → 5, 10
 
----------------------------------------
 
-RETURN
 
-return sends a value back.
+// =======================================
+// Example 3
+// Multiple Parameters
+// =======================================
 
-function add(a,b){
-    return a+b;
+function add(num1, num2){
+
+    console.log(num1 + num2);
+
 }
 
-let result = add(5,4);
+add(10,20);
+add(4,7);
 
-console.log(result);
 
-Output
 
-9
 
----------------------------------------
 
-FUNCTION EXPRESSION
+// =======================================
+// Example 4
+// Return Keyword
+// =======================================
 
-const greet = function(){
-    console.log("Hello");
+// return sends a value back
+
+function multiply(a,b){
+
+    return a*b;
+
 }
 
----------------------------------------
+let answer = multiply(5,4);
 
-ARROW FUNCTION
+console.log(answer);
 
-const greet = () => {
-    console.log("Hello");
+
+
+
+
+// =======================================
+// Example 5
+// Function Expression
+// =======================================
+
+const message = function(){
+
+    console.log("Learning JavaScript");
+
 }
 
-Short version
+message();
 
-const square = num => num * num;
 
----------------------------------------
 
-CALLING A FUNCTION
 
-Function Definition
 
-↓
+// =======================================
+// Example 6
+// Arrow Function
+// =======================================
 
-Function Call
+const square = (number)=>{
 
-↓
+    return number*number;
 
-Code Executes
-
----------------------------------------
-
-COMMON MISTAKES
-
-❌ Forgetting ()
-
-greet;
-
-✔
-
-greet();
-
--------------------------------
-
-❌ Forgetting return
-
-function add(a,b){
-    a+b;
 }
 
-returns undefined.
+console.log(square(5));
 
----------------------------------------
 
-INTERVIEW QUESTIONS
 
-1. What is a function?
 
-2. Difference between Parameters and Arguments?
 
-3. What does return do?
+// =======================================
+// Example 7
+// Short Arrow Function
+// =======================================
 
-4. Difference between Function Declaration and Arrow Function?
+const cube = number => number*number*number;
 
----------------------------------------
+console.log(cube(3));
 
-PRACTICE
 
-✔ Calculator
 
-✔ Greeting App
 
-✔ Temperature Converter
 
-✔ BMI Calculator
+// =======================================
+// Example 8
+// Real Example
+// Click Counter
+// =======================================
 
-✔ Click Counter (Our Project)
+// Imagine our counter project
+
+function updateCounter(){
+
+    console.log("Counter Updated");
+
+}
+
+updateCounter();
+
+
+
+
+
+// =======================================
+// Common Mistakes
+// =======================================
+
+// Wrong
+
+// greet;
+
+// Correct
+
+// greet();
+
+
+
+// Wrong
+
+// function add(){
+//     2+3;
+// }
+
+// Correct
+
+// function add(){
+//     return 2+3;
+// }
+
+
+
+
+
+// =======================================
+// Challenge
+// =======================================
+
+// Create a function
+
+// sayWelcome(name)
+
+// Output
+
+// Welcome Mariam
