@@ -104,7 +104,12 @@ const Promisefive = new Promise(function (resolve, reject) {
     }, 1000)
 });
 
-async function consumePromiseFive({
-    const respond = await Promisefive
-
-})
+async function consumePromiseFive() {
+    try {
+        const respond = await Promisefive;
+        console.log(respond);
+    }
+    catch(error) {
+        console.log(error);
+    }
+};
