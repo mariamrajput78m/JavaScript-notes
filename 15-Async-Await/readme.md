@@ -375,3 +375,276 @@ orderFood()
         console.log(error);
 
     });
+
+// ==========================================
+// 12. async FUNCTION
+// ==========================================
+
+// The async keyword is used to create
+// an asynchronous function.
+//
+// An async function always returns
+// a Promise.
+
+async function greet() {
+
+    return "Hello from async function!";
+
+}
+
+greet().then((message) => {
+
+    console.log(message);
+
+});
+
+
+
+// ==========================================
+// 13. await
+// ==========================================
+
+// await is used to wait for a Promise
+// to settle.
+//
+// await can normally be used inside
+// an async function.
+
+function getUser() {
+
+    return new Promise((resolve) => {
+
+        setTimeout(() => {
+
+            resolve("User data received!");
+
+        }, 2000);
+
+    });
+
+}
+
+async function showUser() {
+
+    console.log("Getting user data...");
+
+    // JavaScript waits for the Promise
+    // to resolve before continuing here.
+
+    let result = await getUser();
+
+    console.log(result);
+
+}
+
+showUser();
+
+
+
+// ==========================================
+// 14. async + await
+// ==========================================
+
+// async/await makes asynchronous code
+// easier to read.
+//
+// Instead of:
+//
+// .then()
+// .then()
+// .then()
+//
+// we can write code that looks more
+// like normal sequential code.
+
+function getData() {
+
+    return new Promise((resolve) => {
+
+        setTimeout(() => {
+
+            resolve("Data received!");
+
+        }, 2000);
+
+    });
+
+}
+
+async function fetchData() {
+
+    console.log("Starting...");
+
+    let data = await getData();
+
+    console.log(data);
+
+    console.log("Finished!");
+
+}
+
+fetchData();
+
+
+
+// ==========================================
+// 15. ERROR HANDLING WITH try/catch
+// ==========================================
+
+// When using async/await,
+// try/catch can be used to handle errors.
+
+function loginUser() {
+
+    return new Promise((resolve, reject) => {
+
+        let loginSuccessful = false;
+
+        setTimeout(() => {
+
+            if (loginSuccessful) {
+
+                resolve("Login successful!");
+
+            } else {
+
+                reject("Invalid username or password!");
+
+            }
+
+        }, 1000);
+
+    });
+
+}
+
+async function login() {
+
+    try {
+
+        let result = await loginUser();
+
+        console.log(result);
+
+    }
+
+    catch (error) {
+
+        console.log(error);
+
+    }
+
+}
+
+login();
+
+
+
+// ==========================================
+// 16. REAL-LIFE FLOW
+// ==========================================
+
+// Imagine an online shopping website.
+//
+// Step 1 → Place order
+// Step 2 → Process payment
+// Step 3 → Prepare package
+// Step 4 → Ship order
+//
+// Each step may take some time.
+//
+// Promises + async/await make this easier
+// to manage.
+
+function placeOrder() {
+
+    return new Promise((resolve) => {
+
+        setTimeout(() => {
+
+            resolve("Order placed");
+
+        }, 1000);
+
+    });
+
+}
+
+function processPayment() {
+
+    return new Promise((resolve) => {
+
+        setTimeout(() => {
+
+            resolve("Payment processed");
+
+        }, 1000);
+
+    });
+
+}
+
+function shipOrder() {
+
+    return new Promise((resolve) => {
+
+        setTimeout(() => {
+
+            resolve("Order shipped");
+
+        }, 1000);
+
+    });
+
+}
+
+async function completeOrder() {
+
+    try {
+
+        let order = await placeOrder();
+
+        console.log(order);
+
+
+        let payment = await processPayment();
+
+        console.log(payment);
+
+
+        let shipping = await shipOrder();
+
+        console.log(shipping);
+
+
+        console.log("Order completed!");
+
+    }
+
+    catch (error) {
+
+        console.log("Error:", error);
+
+    }
+
+}
+
+completeOrder();
+
+
+
+// ==========================================
+// 17. IMPORTANT CONCEPT
+// ==========================================
+
+// JavaScript is single-threaded.
+//
+// It executes one main piece of JavaScript
+// at a time.
+//
+// Asynchronous behavior allows operations
+// such as timers and network requests to
+// be handled without blocking the main
+// JavaScript execution.
+
+
