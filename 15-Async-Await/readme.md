@@ -14,13 +14,10 @@
 // line to finish.
 
 console.log("First");
-
 console.log("Second");
-
 console.log("Third");
 
 // Output:
-//
 // First
 // Second
 // Third
@@ -38,20 +35,15 @@ console.log("Third");
 console.log("Start");
 
 setTimeout(function () {
-
     console.log("This runs later");
-
 }, 2000);
 
 console.log("End");
 
 // Output:
-//
 // Start
 // End
 // This runs later
-//
-// "This runs later" appears after 2 seconds.
 
 
 
@@ -59,33 +51,30 @@ console.log("End");
 // 3. setTimeout()
 // ==========================================
 
-// setTimeout() is used to execute a function
-// after a specified amount of time.
+// setTimeout() executes a function after
+// a specified amount of time.
 //
-// Time is written in milliseconds.
+// Time is measured in milliseconds.
 //
 // 1000 milliseconds = 1 second
 
 setTimeout(function () {
-
     console.log("Hello after 2 seconds");
-
 }, 2000);
 
+
+
 // ==========================================
-// 5. CALLBACK + setTimeout()
+// 4. CALLBACK + setTimeout()
 // ==========================================
 
 // The function passed to setTimeout()
 // is a callback.
 //
-// It is given to setTimeout() and executed
-// later.
+// It is executed later.
 
 function sayHello() {
-
     console.log("Hello!");
-
 }
 
 setTimeout(sayHello, 2000);
@@ -104,59 +93,52 @@ setTimeout(sayHello, 2000);
 
 
 // ==========================================
-// 6. MULTIPLE ASYNCHRONOUS TASKS
+// 5. MULTIPLE ASYNCHRONOUS TASKS
 // ==========================================
 
 console.log("Task 1");
 
 setTimeout(() => {
-
     console.log("Task 2");
-
 }, 2000);
 
 setTimeout(() => {
-
     console.log("Task 3");
-
 }, 1000);
 
 console.log("Task 4");
 
 // Output:
-//
 // Task 1
 // Task 4
 // Task 3
 // Task 2
-//
-// Even though Task 2 was written before
-// Task 3, Task 3 finishes first because
-// it has a shorter timer.
+
+// Task 3 appears before Task 2 because
+// its timer is shorter.
 
 
 
 // ==========================================
-// 7. WHY DO WE NEED ASYNC JAVASCRIPT?
+// 6. WHY DO WE NEED ASYNC JAVASCRIPT?
 // ==========================================
 
 // Some operations take time.
 //
 // Examples:
-//
 // - Getting data from a server
 // - API requests
 // - Reading files
 // - Database operations
 // - Timers
 //
-// We don't want JavaScript to freeze
-// while waiting for these operations.
+// We don't want JavaScript to stop all
+// other work while waiting for these tasks.
 
 
 
 // ==========================================
-// 8. CALLBACK EXAMPLE
+// 7. CALLBACK EXAMPLE
 // ==========================================
 
 // A callback is a function passed into
@@ -170,25 +152,23 @@ function downloadFile(callback) {
 
         console.log("Download complete!");
 
-        // Execute callback after
-        // downloading is complete.
+        // Execute the callback after
+        // the download is complete.
 
         callback();
 
     }, 2000);
-
 }
+
 
 function openFile() {
-
     console.log("Opening file...");
-
 }
+
 
 downloadFile(openFile);
 
 // Output:
-//
 // Downloading file...
 // Download complete!
 // Opening file...
@@ -196,14 +176,12 @@ downloadFile(openFile);
 
 
 // ==========================================
-// 9. CALLBACK HELL
+// 8. CALLBACK HELL
 // ==========================================
 
-// When many asynchronous operations depend
-// on each other, callbacks can become
-// deeply nested.
-//
-// This is called Callback Hell.
+// Callback Hell happens when many
+// asynchronous operations depend on each
+// other and callbacks become deeply nested.
 //
 // It is also called the
 // "Pyramid of Doom."
@@ -232,27 +210,28 @@ setTimeout(() => {
 
 }, 1000);
 
-// The code becomes difficult to read
-// and maintain.
+// The code works, but becomes difficult
+// to read and maintain.
 
 
 
 // ==========================================
-// 10. PROMISES
+// 9. PROMISES
 // ==========================================
 
 // A Promise represents the eventual
 // completion or failure of an operation.
 //
-// A Promise can have three states:
+// A Promise has three states:
 //
 // 1. Pending
 // 2. Fulfilled
 // 3. Rejected
 
 
+
 // ==========================================
-// Creating a Promise
+// 10. CREATING A PROMISE
 // ==========================================
 
 const myPromise = new Promise((resolve, reject) => {
@@ -272,30 +251,27 @@ const myPromise = new Promise((resolve, reject) => {
         // Something went wrong.
 
         reject("Task failed!");
-
     }
-
 });
 
 
 
 // ==========================================
-// Consuming a Promise
+// 11. CONSUMING A PROMISE
 // ==========================================
 
 // .then() runs when the Promise
 // is successfully resolved.
 
-myPromise.then((message) => {
-
-    console.log(message);
-
-});
+myPromise
+    .then((message) => {
+        console.log(message);
+    });
 
 
 
 // ==========================================
-// .catch()
+// 12. .catch()
 // ==========================================
 
 // .catch() handles a rejected Promise.
@@ -305,38 +281,29 @@ const anotherPromise = new Promise((resolve, reject) => {
     let success = false;
 
     if (success) {
-
         resolve("Success!");
-
     } else {
-
         reject("Something went wrong!");
-
     }
-
 });
 
+
 anotherPromise
-
     .then((message) => {
-
         console.log(message);
-
     })
-
     .catch((error) => {
-
         console.log(error);
-
     });
 
 
 
 // ==========================================
-// 11. PROMISE WITH setTimeout()
+// 13. PROMISE WITH setTimeout()
 // ==========================================
 
-// This is a more realistic example.
+// Promises are often used with
+// asynchronous operations.
 
 function orderFood() {
 
@@ -347,37 +314,28 @@ function orderFood() {
             let orderReady = true;
 
             if (orderReady) {
-
                 resolve("Food is ready!");
-
             } else {
-
                 reject("Order failed!");
-
             }
 
         }, 2000);
-
     });
-
 }
 
+
 orderFood()
-
     .then((message) => {
-
         console.log(message);
-
     })
-
     .catch((error) => {
-
         console.log(error);
-
     });
 
+
+
 // ==========================================
-// 12. async FUNCTION
+// 14. async FUNCTION
 // ==========================================
 
 // The async keyword is used to create
@@ -389,25 +347,24 @@ orderFood()
 async function greet() {
 
     return "Hello from async function!";
-
 }
 
-greet().then((message) => {
 
-    console.log(message);
-
-});
+greet()
+    .then((message) => {
+        console.log(message);
+    });
 
 
 
 // ==========================================
-// 13. await
+// 15. await
 // ==========================================
 
 // await is used to wait for a Promise
 // to settle.
 //
-// await can normally be used inside
+// await is normally used inside
 // an async function.
 
 function getUser() {
@@ -419,44 +376,36 @@ function getUser() {
             resolve("User data received!");
 
         }, 2000);
-
     });
-
 }
+
 
 async function showUser() {
 
     console.log("Getting user data...");
 
-    // JavaScript waits for the Promise
-    // to resolve before continuing here.
+    // Wait for the Promise to resolve.
 
     let result = await getUser();
 
     console.log(result);
-
 }
+
 
 showUser();
 
 
 
-
 // ==========================================
-// 14. async + await
+// 16. async + await
 // ==========================================
 
 // async/await makes asynchronous code
 // easier to read.
 //
-// Instead of:
-//
-// .then()
-// .then()
-// .then()
-//
-// we can write code that looks more
-// like normal sequential code.
+// Instead of chaining multiple .then()
+// methods, we can write code that looks
+// more like normal sequential code.
 
 function getData() {
 
@@ -467,10 +416,9 @@ function getData() {
             resolve("Data received!");
 
         }, 2000);
-
     });
-
 }
+
 
 async function fetchData() {
 
@@ -481,19 +429,19 @@ async function fetchData() {
     console.log(data);
 
     console.log("Finished!");
-
 }
+
 
 fetchData();
 
 
 
 // ==========================================
-// 15. ERROR HANDLING WITH try/catch
+// 17. ERROR HANDLING WITH try/catch
 // ==========================================
 
-// When using async/await,
-// try/catch can be used to handle errors.
+// try/catch can be used with async/await
+// to handle rejected Promises.
 
 function loginUser() {
 
@@ -504,20 +452,15 @@ function loginUser() {
         setTimeout(() => {
 
             if (loginSuccessful) {
-
                 resolve("Login successful!");
-
             } else {
-
                 reject("Invalid username or password!");
-
             }
 
         }, 1000);
-
     });
-
 }
+
 
 async function login() {
 
@@ -527,115 +470,99 @@ async function login() {
 
         console.log(result);
 
-    }
-
-    catch (error) {
+    } catch (error) {
 
         console.log(error);
-
     }
-
 }
+
 
 login();
 
 
 
 // ==========================================
-// 16. REAL-LIFE FLOW
+// 18. REAL-LIFE ASYNC FLOW
 // ==========================================
 
 // Imagine an online shopping website.
 //
 // Step 1 → Place order
 // Step 2 → Process payment
-// Step 3 → Prepare package
-// Step 4 → Ship order
+// Step 3 → Ship order
 //
-// Each step may take some time.
+// Each step takes some time.
 //
-// Promises + async/await make this easier
-// to manage.
+// async/await makes the sequence easier
+// to understand.
 
 function placeOrder() {
 
     return new Promise((resolve) => {
 
         setTimeout(() => {
-
             resolve("Order placed");
-
         }, 1000);
 
     });
-
 }
+
 
 function processPayment() {
 
     return new Promise((resolve) => {
 
         setTimeout(() => {
-
             resolve("Payment processed");
-
         }, 1000);
 
     });
-
 }
+
 
 function shipOrder() {
 
     return new Promise((resolve) => {
 
         setTimeout(() => {
-
             resolve("Order shipped");
-
         }, 1000);
 
     });
-
 }
+
 
 async function completeOrder() {
 
     try {
 
         let order = await placeOrder();
-
         console.log(order);
 
 
         let payment = await processPayment();
-
         console.log(payment);
 
 
         let shipping = await shipOrder();
-
         console.log(shipping);
 
 
         console.log("Order completed!");
 
-    }
-
-    catch (error) {
+    } catch (error) {
 
         console.log("Error:", error);
-
     }
-
 }
+
 
 completeOrder();
 
 
 
 // ==========================================
-// 17. IMPORTANT CONCEPT
+// 19. IMPORTANT CONCEPT
 // ==========================================
 
 // JavaScript is single-threaded.
@@ -645,41 +572,26 @@ completeOrder();
 //
 // Asynchronous behavior allows operations
 // such as timers and network requests to
-// be handled without blocking the main
+// happen without blocking the main
 // JavaScript execution.
 
 
+
 // ==========================================
-// 18. THE COMPLETE JOURNEY
+// 20. COMPLETE JOURNEY
 // ==========================================
 
-// We started with:
-//
-// Synchronous Code
-//
-//        ↓
-//
+// Synchronous JavaScript
+//          ↓
 // Callbacks
-//
-//        ↓
-//
+//          ↓
 // Callback Hell
-//
-//        ↓
-//
+//          ↓
 // Promises
-//
-//        ↓
-//
+//          ↓
 // async / await
-//
-//        ↓
-//
+//          ↓
 // try / catch
-//
-// This is the progression you should
-// understand rather than memorizing
-// individual pieces of syntax.
 
 
 
@@ -691,30 +603,31 @@ completeOrder();
 // → Runs a function later.
 //
 // Callback
-// → Function passed to another function.
+// → A function passed to another function.
 //
 // Promise
-// → Represents an eventual result.
+// → Represents the eventual result of
+//   an asynchronous operation.
 //
 // resolve()
-// → Promise completed successfully.
+// → Successfully completes a Promise.
 //
 // reject()
-// → Promise failed.
+// → Rejects a Promise.
 //
 // .then()
-// → Handles successful Promise.
+// → Handles a fulfilled Promise.
 //
 // .catch()
-// → Handles Promise errors.
+// → Handles a rejected Promise.
 //
 // async
-// → Makes a function asynchronous
-//   and makes it return a Promise.
+// → Makes a function return a Promise.
 //
 // await
-// → Waits for a Promise inside
-//   an async function.
+// → Waits for a Promise inside an
+//   async function.
 //
 // try/catch
-// → Handles errors with async/await.
+// → Handles errors when using
+//   async/await.
