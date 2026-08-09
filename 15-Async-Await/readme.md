@@ -648,3 +648,72 @@ completeOrder();
 // JavaScript execution.
 
 
+// ==========================================
+// 18. THE COMPLETE JOURNEY
+// ==========================================
+
+// We started with:
+//
+// Synchronous Code
+//
+//        ↓
+//
+// Callbacks
+//
+//        ↓
+//
+// Callback Hell
+//
+//        ↓
+//
+// Promises
+//
+//        ↓
+//
+// async / await
+//
+//        ↓
+//
+// try / catch
+//
+// This is the progression you should
+// understand rather than memorizing
+// individual pieces of syntax.
+
+
+
+// ==========================================
+// QUICK SUMMARY
+// ==========================================
+
+// setTimeout()
+// → Runs a function later.
+//
+// Callback
+// → Function passed to another function.
+//
+// Promise
+// → Represents an eventual result.
+//
+// resolve()
+// → Promise completed successfully.
+//
+// reject()
+// → Promise failed.
+//
+// .then()
+// → Handles successful Promise.
+//
+// .catch()
+// → Handles Promise errors.
+//
+// async
+// → Makes a function asynchronous
+//   and makes it return a Promise.
+//
+// await
+// → Waits for a Promise inside
+//   an async function.
+//
+// try/catch
+// → Handles errors with async/await.
