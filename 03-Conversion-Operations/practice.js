@@ -460,3 +460,88 @@ let deliveryFee = 200;
 let finalPrice = numericPrice + deliveryFee;
 
 console.log("Final price:", finalPrice);
+// ==========================================
+// QUESTION 19
+// ==========================================
+
+/*
+A student has:
+
+obtainedMarks = "425"
+totalMarks = 500
+
+Convert obtainedMarks into a Number.
+
+Then calculate the percentage.
+
+Formula:
+
+(obtainedMarks / totalMarks) * 100
+*/
+
+let obtainedMarks = "425";
+let totalMarks = 500;
+
+let numericMarks = Number(obtainedMarks);
+
+let percentage = (numericMarks / totalMarks) * 100;
+
+console.log("Percentage:", percentage);
+
+
+// ==========================================
+// QUESTION 20
+// ==========================================
+
+/*
+You have:
+
+money = "5000"
+shopping = 3200
+
+Convert money into a Number.
+
+Then calculate how much money remains.
+*/
+
+let money = "5000";
+let shopping = 3200;
+
+let numericMoney = Number(money);
+
+let remainingMoney = numericMoney - shopping;
+
+console.log("Remaining money:", remainingMoney);
+
+
+// ==========================================
+// PART 6 — CHALLENGE
+// ==========================================
+
+
+// ==========================================
+// QUESTION 21
+// ==========================================
+
+/*
+You receive these values from a form:
+
+quantity = "3"
+price = "450"
+
+Both values are Strings.
+
+Convert BOTH into Numbers.
+
+Then calculate the total price.
+*/
+
+let quantity = "3";
+let price = "450";
+
+let numericQuantity = Number(quantity);
+let numericProductPrice = Number(price);
+
+let total = numericQuantity * numericProductPrice;
+
+console.log("Total price:", total);
