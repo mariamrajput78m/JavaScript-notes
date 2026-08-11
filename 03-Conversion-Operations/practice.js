@@ -545,3 +545,148 @@ let numericProductPrice = Number(price);
 let total = numericQuantity * numericProductPrice;
 
 console.log("Total price:", total);
+// ==========================================
+// QUESTION 22
+// ==========================================
+
+/*
+A student's marks are stored as Strings:
+
+math = "85"
+english = "78"
+programming = "92"
+
+Convert all three into Numbers.
+
+Then calculate:
+
+1. Total marks
+2. Average marks
+*/
+
+let mathMarks = "85";
+let englishMarks = "78";
+let programmingMarks = "92";
+
+let numericMath = Number(mathMarks);
+let numericEnglish = Number(englishMarks);
+let numericProgramming = Number(programmingMarks);
+
+let marksTotal =
+    numericMath +
+    numericEnglish +
+    numericProgramming;
+
+let marksAverage = marksTotal / 3;
+
+console.log("Total:", marksTotal);
+console.log("Average:", marksAverage);
+
+
+// ==========================================
+// QUESTION 23 — CHALLENGE
+// ==========================================
+
+/*
+You have:
+
+let temperature = "35";
+
+Convert it into a Number.
+
+Then increase the temperature by 2.
+
+Print the final temperature.
+*/
+
+let temperature = "35";
+
+let numericTemperature = Number(temperature);
+
+numericTemperature += 2;
+
+console.log("Temperature:", numericTemperature);
+
+
+// ==========================================
+// QUESTION 24 — CHALLENGE
+// ==========================================
+
+/*
+You have:
+
+let balance = "10000";
+
+You spend:
+
+2500
+
+Then receive:
+
+1500
+
+Convert balance into a Number.
+
+Calculate the final balance.
+*/
+
+let startingBalance = "10000";
+
+let numericBalance = Number(startingBalance);
+
+numericBalance -= 2500;
+numericBalance += 1500;
+
+console.log("Final balance:", numericBalance);
+
+
+// ==========================================
+// QUICK REVISION
+// ==========================================
+
+/*
+TYPE CONVERSION
+----------------
+
+Number("100")
+→ 100
+
+String(100)
+→ "100"
+
+Boolean(1)
+→ true
+
+Boolean(0)
+→ false
+
+
+IMPORTANT
+----------------
+
+Number("hello")
+→ NaN
+
+Number("")
+→ 0
+
+
+ARITHMETIC OPERATORS
+----------------
+
++   Addition
+-   Subtraction
+*   Multiplication
+/   Division
+%   Remainder
+++  Increase by 1
+--  Decrease by 1
+
+
+ASSIGNMENT OPERATORS
+----------------
+
++=
+-=
+*=
+/=
