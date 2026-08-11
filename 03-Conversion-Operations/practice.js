@@ -690,3 +690,23 @@ ASSIGNMENT OPERATORS
 -=
 *=
 /=
+IMPORTANT DIFFERENCE
+----------------
+
+"10" + 5
+→ "105"
+
+Number("10") + 5
+→ 15
+
+
+The first one performs string
+concatenation.
+
+The second one performs addition.
+*/
+
+
+// ==========================================
+// END OF PRACTICE
+// ==========================================
