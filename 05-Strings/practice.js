@@ -79,3 +79,16 @@ console.log(message.toUpperCase());
 
 // Output: 
 // HELLO JAVASCRIPT
+
+// ------------------------------------------------------------ 
+//  QUESTION 5 — .toLowerCase() 
+// ------------------------------------------------------------ 
+
+/* Convert: "HELLO WORLD" into lowercase. */ 
+// ANSWER: 
+
+let message2 = "HELLO WORLD"; 
+console.log(message2.toLowerCase()); 
+
+// Output: 
+// hello world
