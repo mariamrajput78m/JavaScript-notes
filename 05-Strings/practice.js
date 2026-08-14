@@ -60,3 +60,4 @@ console.log(university.length);
 // Example: 
 // "Hello".length 
 // Output: 5
+
