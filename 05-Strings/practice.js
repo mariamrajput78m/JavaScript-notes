@@ -71,3 +71,11 @@ console.log(university.length);
 // ------------------------------------------------------------
 
 
+/* Convert: "hello javascript" into uppercase. */ 
+// ANSWER: 
+
+let message = "hello javascript"; 
+console.log(message.toUpperCase()); 
+
+// Output: 
+// HELLO JAVASCRIPT
