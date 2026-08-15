@@ -21,3 +21,20 @@ console.log("After increment:", count); // 6
  
 count--; // same as count = count - 1
 console.log("After decrement:", count); // 5
+
+// ---------- 3. NUMBER TYPES: INTEGER vs FLOAT ----------
+let intNum = 42;
+let floatNum = 42.5;
+ 
+// JS does NOT separate int and float types like C++.
+// Everything is just "number".
+console.log(typeof intNum);   // "number"
+console.log(typeof floatNum); // "number"
+ 
+ 
+// ---------- 4. FLOATING POINT PRECISION ISSUE ----------
+// This is a classic JS trap - watch out for it
+console.log(0.1 + 0.2); // 0.30000000000000004 (NOT exactly 0.3)
+ 
+// Fix: round to a fixed number of decimals
+console.log((0.1 + 0.2).toFixed(2)); // "0.30" (returns a string!)
