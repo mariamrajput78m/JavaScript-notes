@@ -94,3 +94,24 @@ console.log(price.toFixed(2));        // "1234.57" -> rounds to 2 decimals, retu
 console.log(price.toPrecision(4));    // "1235"    -> 4 significant digits total
 console.log(price.toLocaleString());  // "1,234.568" -> adds commas, locale formatting
  
+// ---------- 11. CHECKING IF SOMETHING IS A VALID NUMBER ----------
+function isValidNumber(value) {
+  return typeof value === "number" && !isNaN(value);
+}
+console.log(isValidNumber(10));      // true
+console.log(isValidNumber(NaN));     // false
+console.log(isValidNumber("10"));    // false -> string, not number type
+ 
+ 
+// ---------- 12. MINI PRACTICE PROBLEM ----------
+// Calculate the average of an array of numbers
+function average(numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  return sum / numbers.length;
+}
+ 
+let scores = [80, 90, 70, 100, 60];
+console.log("Average score:", average(scores)); // 80
