@@ -52,3 +52,26 @@ console.log(parseInt(str3));    // 25 -> stops at first non-numeric char
 console.log(Number(str1));  // 25
 console.log(Number(str3));  // NaN -> because "25px" is not a clean number
  
+// ---------- 6. NaN (Not a Number) ----------
+let badMath = "abc" * 2;
+console.log(badMath);          // NaN
+console.log(typeof badMath);   // "number" (yes, NaN's type is "number" - weird but true)
+console.log(isNaN(badMath));   // true -> use this to check for NaN
+ 
+ 
+// ---------- 7. INFINITY ----------
+console.log(1 / 0);   // Infinity
+console.log(-1 / 0);  // -Infinity
+console.log(Infinity > 1000000); // true
+ 
+ 
+// ---------- 8. THE Math OBJECT ----------
+console.log(Math.round(4.5));   // 5  -> rounds to nearest integer
+console.log(Math.floor(4.9));   // 4  -> always rounds down
+console.log(Math.ceil(4.1));    // 5  -> always rounds up
+console.log(Math.abs(-15));     // 15 -> absolute value
+console.log(Math.max(3, 7, 2)); // 7  -> largest value
+console.log(Math.min(3, 7, 2)); // 2  -> smallest value
+console.log(Math.pow(2, 5));    // 32 -> same as 2 ** 5
+console.log(Math.sqrt(81));     // 9  -> square root
+console.log(Math.PI);           // 3.141592653589793
