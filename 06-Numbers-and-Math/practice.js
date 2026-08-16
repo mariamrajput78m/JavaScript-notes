@@ -75,3 +75,14 @@ console.log(Math.min(3, 7, 2)); // 2  -> smallest value
 console.log(Math.pow(2, 5));    // 32 -> same as 2 ** 5
 console.log(Math.sqrt(81));     // 9  -> square root
 console.log(Math.PI);           // 3.141592653589793
+
+
+// ---------- 9. RANDOM NUMBERS ----------
+// Math.random() gives a decimal between 0 (inclusive) and 1 (exclusive)
+console.log(Math.random());
+ 
+// Generate a random integer between min and max (both inclusive)
+function randomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+console.log("Random dice roll (1-6):", randomInt(1, 6));
