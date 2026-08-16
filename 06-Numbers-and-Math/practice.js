@@ -38,3 +38,17 @@ console.log(0.1 + 0.2); // 0.30000000000000004 (NOT exactly 0.3)
  
 // Fix: round to a fixed number of decimals
 console.log((0.1 + 0.2).toFixed(2)); // "0.30" (returns a string!)
+
+// ---------- 5. PARSING STRINGS INTO NUMBERS ----------
+let str1 = "25";
+let str2 = "25.75";
+let str3 = "25px"; // common when reading CSS values
+ 
+console.log(parseInt(str1));    // 25
+console.log(parseFloat(str2));  // 25.75
+console.log(parseInt(str3));    // 25 -> stops at first non-numeric char
+ 
+// Number() is stricter - fails if the whole string isn't a valid number
+console.log(Number(str1));  // 25
+console.log(Number(str3));  // NaN -> because "25px" is not a clean number
+ 
