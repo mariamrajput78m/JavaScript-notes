@@ -86,3 +86,11 @@ function randomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 console.log("Random dice roll (1-6):", randomInt(1, 6));
+
+// ---------- 10. NUMBER FORMATTING ----------
+let price = 1234.5678;
+ 
+console.log(price.toFixed(2));        // "1234.57" -> rounds to 2 decimals, returns STRING
+console.log(price.toPrecision(4));    // "1235"    -> 4 significant digits total
+console.log(price.toLocaleString());  // "1,234.568" -> adds commas, locale formatting
+ 
