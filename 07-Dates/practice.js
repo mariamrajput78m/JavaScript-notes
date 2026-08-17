@@ -41,3 +41,18 @@ editable.setMonth(0); // January
 editable.setDate(1);
 console.log("After edits:", editable); // Jan 1, 2027
  
+// ---------- 4. TIMESTAMPS (milliseconds since epoch) ----------
+let ts = Date.now(); // current timestamp, no need to create a Date object
+console.log("Current timestamp:", ts);
+ 
+let dateFromNow = new Date();
+console.log("Date to timestamp:", dateFromNow.getTime());
+ 
+ 
+// ---------- 5. DATE MATH (ADD/SUBTRACT DAYS) ----------
+// There's no built-in "addDays" method - you do it manually
+function addDays(date, days) {
+  let result = new Date(date); // copy, so we don't mutate the original
+  result.setDate(result.getDate() + days);
+  return result;
+}
