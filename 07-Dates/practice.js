@@ -70,3 +70,10 @@ let diffMs = end - start; // subtracting dates gives milliseconds difference
 let diffDays = diffMs / (1000 * 60 * 60 * 24); // convert ms -> days
 console.log("Days between:", diffDays);
  
+
+// ---------- 7. COMPARING DATES ----------
+let dateA = new Date(2026, 0, 1);
+let dateB = new Date(2026, 5, 1);
+ 
+console.log(dateA < dateB);   // true -> dates can be compared like numbers
+console.log(dateA.getTime() === dateB.getTime()); // false -> never compare with == or === directly
