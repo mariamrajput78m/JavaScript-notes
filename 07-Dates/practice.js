@@ -62,3 +62,11 @@ let nextWeek = addDays(today, 7);
 console.log("Today:", today);
 console.log("Next week:", nextWeek);
 
+// ---------- 6. DIFFERENCE BETWEEN TWO DATES ----------
+let start = new Date(2026, 0, 1);
+let end = new Date(2026, 7, 17);
+ 
+let diffMs = end - start; // subtracting dates gives milliseconds difference
+let diffDays = diffMs / (1000 * 60 * 60 * 24); // convert ms -> days
+console.log("Days between:", diffDays);
+ 
