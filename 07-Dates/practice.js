@@ -56,3 +56,9 @@ function addDays(date, days) {
   result.setDate(result.getDate() + days);
   return result;
 }
+
+let today = new Date(2026, 7, 17);
+let nextWeek = addDays(today, 7);
+console.log("Today:", today);
+console.log("Next week:", nextWeek);
+
