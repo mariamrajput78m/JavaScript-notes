@@ -76,4 +76,4 @@ let dateA = new Date(2026, 0, 1);
 let dateB = new Date(2026, 5, 1);
  
 console.log(dateA < dateB);   // true -> dates can be compared like numbers
-console.log(dateA.getTime() === dateB.getTime()); // false -> never compare with == or === directly
+console.log(dateA.getTime() === dateB.getTime()); // false -> never compare with == or === directly                                     
