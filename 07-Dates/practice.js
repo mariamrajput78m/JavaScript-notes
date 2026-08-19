@@ -76,4 +76,20 @@ let dateA = new Date(2026, 0, 1);
 let dateB = new Date(2026, 5, 1);
  
 console.log(dateA < dateB);   // true -> dates can be compared like numbers
-console.log(dateA.getTime() === dateB.getTime()); // false -> never compare with == or === directly                                     
+console.log(dateA.getTime() === dateB.getTime()); // false -> never compare with == or === directly    
+
+// ---------- 8. FORMATTING DATES ----------
+let sample = new Date(2026, 7, 17);
+ 
+console.log(sample.toDateString());     // "Mon Aug 17 2026"
+console.log(sample.toISOString());      // "2026-08-17T00:00:00.000Z" -> standard format, good for APIs
+console.log(sample.toLocaleDateString()); // depends on locale, e.g. "8/17/2026" (US)
+ 
+// Custom formatting example (manual, since JS has no built-in "format string")
+function formatDate(date) {
+  let day = String(date.getDate()).padStart(2, "0");
+  let month = String(date.getMonth() + 1).padStart(2, "0"); // +1 to undo 0-indexing
+  let year = date.getFullYear();
+  return `${day}/${month}/${year}`;
+}
+console.log("Custom format:", formatDate(sample)); // "17/08/2026"
