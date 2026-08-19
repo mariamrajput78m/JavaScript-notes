@@ -93,3 +93,23 @@ function formatDate(date) {
   return `${day}/${month}/${year}`;
 }
 console.log("Custom format:", formatDate(sample)); // "17/08/2026"
+
+// ---------- 9. MINI PRACTICE PROBLEM ----------
+// Calculate someone's age given their birth date
+function calculateAge(birthDate) {
+  let today = new Date();
+  let age = today.getFullYear() - birthDate.getFullYear();
+ 
+  // If birthday hasn't happened yet this year, subtract 1
+  let hasHadBirthdayThisYear =
+    today.getMonth() > birthDate.getMonth() ||
+    (today.getMonth() === birthDate.getMonth() && today.getDate() >= birthDate.getDate());
+ 
+  if (!hasHadBirthdayThisYear) {
+    age--;
+  }
+  return age;
+}
+ 
+let birth = new Date(2003, 4, 15); // May 15, 2003
+console.log("Age:", calculateAge(birth));
