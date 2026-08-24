@@ -27,3 +27,11 @@ let removed = fruits.pop(); // removes from the END, returns removed item
 console.log("Removed:", removed);
 console.log(fruits);
  
+// ---------- 4. ADDING / REMOVING FROM THE START ----------
+fruits.unshift("kiwi");   // adds to the START, returns new length
+console.log(fruits);
+ 
+let removedFirst = fruits.shift(); // removes from the START, returns removed item
+console.log("Removed first:", removedFirst);
+console.log(fruits);
+ 
