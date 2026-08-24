@@ -19,6 +19,7 @@ console.log(fruits[10]); // undefined -> no error, just undefined
 fruits[1] = "blueberry"; // update by index
 console.log(fruits);
 
+
 // ---------- 3. ADDING / REMOVING FROM THE END ----------
 fruits.push("grape");     // adds to the END, returns new length
 console.log(fruits);
@@ -35,3 +36,13 @@ let removedFirst = fruits.shift(); // removes from the START, returns removed it
 console.log("Removed first:", removedFirst);
 console.log(fruits);
  
+
+// ---------- 5. SPLICE (remove/insert anywhere) ----------
+let letters = ["a", "b", "c", "d", "e"];
+ 
+// splice(startIndex, deleteCount, itemsToInsert...)
+letters.splice(1, 2); // remove 2 items starting at index 1
+console.log("After removing:", letters); // ["a", "d", "e"]
+ 
+letters.splice(1, 0, "x", "y"); // insert without removing
+console.log("After inserting:", letters); // ["a", "x", "y", "d", "e"]
