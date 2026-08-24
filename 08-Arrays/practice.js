@@ -18,4 +18,12 @@ console.log(fruits[10]); // undefined -> no error, just undefined
  
 fruits[1] = "blueberry"; // update by index
 console.log(fruits);
+
+// ---------- 3. ADDING / REMOVING FROM THE END ----------
+fruits.push("grape");     // adds to the END, returns new length
+console.log(fruits);
+ 
+let removed = fruits.pop(); // removes from the END, returns removed item
+console.log("Removed:", removed);
+console.log(fruits);
  
