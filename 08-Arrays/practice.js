@@ -55,3 +55,21 @@ let sliced = original.slice(1, 3); // from index 1 up to (not including) 3
 console.log("Sliced:", sliced);       // [2, 3]
 console.log("Original unchanged:", original); // [1, 2, 3, 4, 5]
 
+
+// ---------- 7. LOOPING THROUGH ARRAYS ----------
+let scores = [80, 90, 70];
+ 
+// classic for loop
+for (let i = 0; i < scores.length; i++) {
+  console.log("Score:", scores[i]);
+}
+ 
+// for...of loop (cleaner, no index needed)
+for (let score of scores) {
+  console.log("Score (for-of):", score);
+}
+ 
+// forEach method
+scores.forEach(function (score, index) {
+  console.log(`Index ${index}: ${score}`);
+});
