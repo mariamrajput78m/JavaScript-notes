@@ -73,3 +73,11 @@ for (let score of scores) {
 scores.forEach(function (score, index) {
   console.log(`Index ${index}: ${score}`);
 });
+
+
+// ---------- 8. MAP (transform each item, returns NEW array) ----------
+let doubled = scores.map(function (score) {
+  return score * 2;
+});
+console.log("Doubled:", doubled);       // [160, 180, 140]
+console.log("Original unchanged:", scores); // [80, 90, 70]
