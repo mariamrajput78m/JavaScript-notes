@@ -47,3 +47,11 @@ console.log("After removing:", letters); // ["a", "d", "e"]
  
 letters.splice(1, 0, "x", "y"); // insert without removing
 console.log("After inserting:", letters); // ["a", "x", "y", "d", "e"]
+
+
+// ---------- 6. SLICE (copy a portion, does NOT modify original) ----------
+let original = [1, 2, 3, 4, 5];
+let sliced = original.slice(1, 3); // from index 1 up to (not including) 3
+console.log("Sliced:", sliced);       // [2, 3]
+console.log("Original unchanged:", original); // [1, 2, 3, 4, 5]
+
