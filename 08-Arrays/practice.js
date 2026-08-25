@@ -81,3 +81,4 @@ let doubled = scores.map(function (score) {
 });
 console.log("Doubled:", doubled);       // [160, 180, 140]
 console.log("Original unchanged:", scores); // [80, 90, 70]
+
