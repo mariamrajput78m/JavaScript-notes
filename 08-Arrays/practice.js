@@ -110,3 +110,9 @@ let foundIndex = scores.findIndex(function (score) {
   return score < 80;
 });
 console.log("Index of first score under 80:", foundIndex); // 2
+
+
+// ---------- 12. INCLUDES / INDEXOF ----------
+console.log(scores.includes(90));  // true
+console.log(scores.indexOf(70));   // 2
+console.log(scores.indexOf(999));  // -1 -> not found
