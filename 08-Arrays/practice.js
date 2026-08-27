@@ -98,3 +98,15 @@ console.log("Total:", total); // 240
  
 let average = total / scores.length;
 console.log("Average:", average);
+
+
+// ---------- 11. FIND / FINDINDEX ----------
+let found = scores.find(function (score) {
+  return score < 80;
+});
+console.log("First score under 80:", found); // 70
+ 
+let foundIndex = scores.findIndex(function (score) {
+  return score < 80;
+});
+console.log("Index of first score under 80:", foundIndex); // 2
