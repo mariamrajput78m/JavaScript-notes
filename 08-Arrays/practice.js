@@ -82,3 +82,10 @@ let doubled = scores.map(function (score) {
 console.log("Doubled:", doubled);       // [160, 180, 140]
 console.log("Original unchanged:", scores); // [80, 90, 70]
 
+
+// ---------- 9. FILTER (keep items that pass a test) ----------
+let passingScores = scores.filter(function (score) {
+  return score >= 75;
+});
+console.log("Passing scores:", passingScores); // [80, 90]
+
