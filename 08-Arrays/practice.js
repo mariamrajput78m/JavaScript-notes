@@ -89,3 +89,12 @@ let passingScores = scores.filter(function (score) {
 });
 console.log("Passing scores:", passingScores); // [80, 90]
 
+
+// ---------- 10. REDUCE (combine all items into one value) ----------
+let total = scores.reduce(function (sum, score) {
+  return sum + score;
+}, 0); // 0 is the starting value
+console.log("Total:", total); // 240
+ 
+let average = total / scores.length;
+console.log("Average:", average);
