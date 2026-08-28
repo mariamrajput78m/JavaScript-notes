@@ -116,3 +116,15 @@ console.log("Index of first score under 80:", foundIndex); // 2
 console.log(scores.includes(90));  // true
 console.log(scores.indexOf(70));   // 2
 console.log(scores.indexOf(999));  // -1 -> not found
+
+
+// ---------- 13. SORTING ----------
+let unsorted = [40, 5, 100, 25, 1];
+ 
+// WARNING: default sort() converts to strings! This breaks number sorting.
+console.log([...unsorted].sort()); // wrong order for numbers, e.g. [1, 100, 25, 40, 5]
+ 
+// Correct way to sort numbers: provide a compare function
+console.log([...unsorted].sort((a, b) => a - b)); // ascending
+console.log([...unsorted].sort((a, b) => b - a)); // descending
+ 
