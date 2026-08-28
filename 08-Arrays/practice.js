@@ -128,3 +128,4 @@ console.log([...unsorted].sort()); // wrong order for numbers, e.g. [1, 100, 25,
 console.log([...unsorted].sort((a, b) => a - b)); // ascending
 console.log([...unsorted].sort((a, b) => b - a)); // descending
  
+
