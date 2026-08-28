@@ -138,3 +138,14 @@ console.log(toReverse.reverse()); // [3, 2, 1] -> mutates the original!
 let words = ["I", "love", "JavaScript"];
 console.log(words.join(" "));  // "I love JavaScript"
 console.log(words.join("-"));  // "I-love-JavaScript"
+
+// ---------- 16. SPREAD OPERATOR (copy or combine arrays) ----------
+let arr1 = [1, 2, 3];
+let arr2 = [4, 5, 6];
+ 
+let combined = [...arr1, ...arr2];
+console.log("Combined:", combined); // [1, 2, 3, 4, 5, 6]
+ 
+let copy = [...arr1]; // shallow copy, not a reference
+copy.push(99);
+console.log("Original arr1 unchanged:", arr1); // [1, 2, 3]
