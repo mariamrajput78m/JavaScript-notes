@@ -129,3 +129,6 @@ console.log([...unsorted].sort((a, b) => a - b)); // ascending
 console.log([...unsorted].sort((a, b) => b - a)); // descending
  
 
+// ---------- 14. REVERSING ----------
+let toReverse = [1, 2, 3];
+console.log(toReverse.reverse()); // [3, 2, 1] -> mutates the original!
