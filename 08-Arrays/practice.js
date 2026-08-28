@@ -132,3 +132,9 @@ console.log([...unsorted].sort((a, b) => b - a)); // descending
 // ---------- 14. REVERSING ----------
 let toReverse = [1, 2, 3];
 console.log(toReverse.reverse()); // [3, 2, 1] -> mutates the original!
+
+
+// ---------- 15. JOINING INTO A STRING ----------
+let words = ["I", "love", "JavaScript"];
+console.log(words.join(" "));  // "I love JavaScript"
+console.log(words.join("-"));  // "I-love-JavaScript"
