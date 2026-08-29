@@ -155,3 +155,13 @@ console.log("Original arr1 unchanged:", arr1); // [1, 2, 3]
 // ---------- 17. CHECKING IF SOMETHING IS AN ARRAY ----------
 console.log(Array.isArray(fruits)); // true
 console.log(Array.isArray("fruits")); // false -> a string is NOT an array
+
+
+// ---------- 18. MINI PRACTICE PROBLEM ----------
+// Remove duplicates from an array
+function removeDuplicates(arr) {
+  return [...new Set(arr)]; // Set automatically drops duplicate values
+}
+ 
+let withDupes = [1, 2, 2, 3, 4, 4, 5];
+console.log("No duplicates:", removeDuplicates(withDupes)); // [1, 2, 3, 4, 5]
