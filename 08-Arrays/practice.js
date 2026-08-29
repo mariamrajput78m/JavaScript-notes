@@ -150,3 +150,8 @@ console.log("Combined:", combined); // [1, 2, 3, 4, 5, 6]
 let copy = [...arr1]; // shallow copy, not a reference
 copy.push(99);
 console.log("Original arr1 unchanged:", arr1); // [1, 2, 3]
+
+
+// ---------- 17. CHECKING IF SOMETHING IS AN ARRAY ----------
+console.log(Array.isArray(fruits)); // true
+console.log(Array.isArray("fruits")); // false -> a string is NOT an array
