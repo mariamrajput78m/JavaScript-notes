@@ -139,6 +139,7 @@ let words = ["I", "love", "JavaScript"];
 console.log(words.join(" "));  // "I love JavaScript"
 console.log(words.join("-"));  // "I-love-JavaScript"
 
+
 // ---------- 16. SPREAD OPERATOR (copy or combine arrays) ----------
 let arr1 = [1, 2, 3];
 let arr2 = [4, 5, 6];
