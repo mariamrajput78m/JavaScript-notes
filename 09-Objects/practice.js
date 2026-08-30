@@ -22,3 +22,14 @@ console.log(person[key]);       // true
  
 let missing = person.address;
 console.log(missing);           // undefined -> no error for missing keys
+
+
+// ---------- 3. ADDING / UPDATING PROPERTIES ----------
+person.city = "Lahore";       // add new property
+person.age = 22;              // update existing property
+console.log(person);
+ 
+ 
+// ---------- 4. DELETING PROPERTIES ----------
+delete person.isStudent;
+console.log(person);
