@@ -33,3 +33,9 @@ console.log(person);
 // ---------- 4. DELETING PROPERTIES ----------
 delete person.isStudent;
 console.log(person);
+
+
+// ---------- 5. CHECKING IF A PROPERTY EXISTS ----------
+console.log("name" in person);       // true
+console.log("isStudent" in person);  // false -> we deleted it above
+console.log(person.hasOwnProperty("city")); // true
