@@ -59,3 +59,8 @@ let course = {
   title: "Database Systems",
   topics: ["SQL", "Normalization", "Transactions"],
 };
+
+
+console.log(course.topics[0]);   // "SQL"
+course.topics.push("Indexing");  // arrays inside objects still work normally
+console.log(course.topics);
