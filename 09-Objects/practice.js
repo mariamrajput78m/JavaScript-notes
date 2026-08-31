@@ -64,3 +64,13 @@ let course = {
 console.log(course.topics[0]);   // "SQL"
 course.topics.push("Indexing");  // arrays inside objects still work normally
 console.log(course.topics);
+
+
+// ---------- 8. LOOPING THROUGH AN OBJECT ----------
+let scores = { math: 90, science: 85, english: 78 };
+ 
+// for...in loop -> gives you the KEYS
+for (let subject in scores) {
+  console.log(subject, ":", scores[subject]);
+}
+ 
