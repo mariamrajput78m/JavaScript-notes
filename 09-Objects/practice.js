@@ -73,4 +73,15 @@ let scores = { math: 90, science: 85, english: 78 };
 for (let subject in scores) {
   console.log(subject, ":", scores[subject]);
 }
+
+// ---------- 9. Object.keys / Object.values / Object.entries ----------
+console.log(Object.keys(scores));    // ["math", "science", "english"]
+console.log(Object.values(scores));  // [90, 85, 78]
+console.log(Object.entries(scores)); // [["math",90], ["science",85], ["english",78]]
+ 
+// entries() is useful for looping with both key and value at once
+for (let [subject, score] of Object.entries(scores)) {
+  console.log(`${subject} -> ${score}`);
+}
+ 
  
