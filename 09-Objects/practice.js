@@ -49,3 +49,13 @@ let student = {
     program: "Computer Science",
   },
 };
+
+console.log(student.university.name); // "University of Lahore"
+console.log(student.university.program);
+ 
+ 
+// ---------- 7. OBJECTS CONTAINING ARRAYS ----------
+let course = {
+  title: "Database Systems",
+  topics: ["SQL", "Normalization", "Transactions"],
+};
