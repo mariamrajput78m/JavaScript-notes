@@ -39,3 +39,13 @@ console.log(person);
 console.log("name" in person);       // true
 console.log("isStudent" in person);  // false -> we deleted it above
 console.log(person.hasOwnProperty("city")); // true
+
+
+// ---------- 6. NESTED OBJECTS ----------
+let student = {
+  name: "Mariam",
+  university: {
+    name: "University of Lahore",
+    program: "Computer Science",
+  },
+};
