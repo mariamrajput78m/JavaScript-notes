@@ -117,3 +117,11 @@ let greetAlone = user.greet;
 // greetAlone(); // would fail or give undefined - "this" loses its connection to user
 
 
+// ---------- 12. SHORTHAND PROPERTY NAMES ----------
+let name = "Ali";
+let age = 25;
+ 
+// old way: { name: name, age: age }
+let shorthandPerson = { name, age }; // same result, less typing
+console.log(shorthandPerson);
+ 
