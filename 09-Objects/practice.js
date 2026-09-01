@@ -85,3 +85,35 @@ for (let [subject, score] of Object.entries(scores)) {
 }
  
  
+
+// ---------- 10. METHODS (functions inside objects) ----------
+let calculator = {
+  a: 10,
+  b: 5,
+  add: function () {
+    return calculator.a + calculator.b;
+  },
+  // shorthand method syntax (same as above, cleaner)
+  subtract() {
+    return this.a - this.b; // "this" refers to the object calling the method
+  },
+};
+ 
+console.log(calculator.add());      // 15
+console.log(calculator.subtract()); // 5
+
+
+// ---------- 11. "this" KEYWORD - COMMON TRAP ----------
+let user = {
+  name: "Mariam",
+  greet: function () {
+    console.log("Hi, I'm " + this.name); // works - "this" = user
+  },
+};
+user.greet(); // "Hi, I'm Mariam"
+ 
+// If you pull the method out separately, "this" breaks
+let greetAlone = user.greet;
+// greetAlone(); // would fail or give undefined - "this" loses its connection to user
+
+
