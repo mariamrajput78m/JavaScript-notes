@@ -125,3 +125,27 @@ let age = 25;
 let shorthandPerson = { name, age }; // same result, less typing
 console.log(shorthandPerson);
  
+
+// ---------- 13. SPREAD OPERATOR (copy or merge objects) ----------
+let base = { a: 1, b: 2 };
+let extra = { c: 3 };
+ 
+let merged = { ...base, ...extra };
+console.log("Merged:", merged); // { a: 1, b: 2, c: 3 }
+ 
+let copy = { ...base }; // shallow copy, not a reference
+copy.a = 999;
+console.log("Original unchanged:", base); // { a: 1, b: 2 }
+
+
+// ---------- 14. DESTRUCTURING (pull properties into variables) ----------
+let profile = { username: "mariam78m", followers: 200, verified: false };
+ 
+let { username, followers } = profile;
+console.log(username);   // "mariam78m"
+console.log(followers);  // 200
+ 
+// rename while destructuring
+let { username: handle } = profile;
+console.log(handle); // "mariam78m"
+ 
