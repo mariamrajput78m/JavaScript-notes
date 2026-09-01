@@ -148,4 +148,13 @@ console.log(followers);  // 200
 // rename while destructuring
 let { username: handle } = profile;
 console.log(handle); // "mariam78m"
+
+
+// ---------- 15. COMPARING OBJECTS ----------
+let obj1 = { x: 1 };
+let obj2 = { x: 1 };
+let obj3 = obj1;
+ 
+console.log(obj1 === obj2); // false -> different objects in memory, even if content matches
+console.log(obj1 === obj3); // true  -> obj3 points to the SAME object as obj1
  
