@@ -157,4 +157,11 @@ let obj3 = obj1;
  
 console.log(obj1 === obj2); // false -> different objects in memory, even if content matches
 console.log(obj1 === obj3); // true  -> obj3 points to the SAME object as obj1
+
+
+// ---------- 16. OBJECT.FREEZE (make an object unchangeable) ----------
+let constants = { pi: 3.14 };
+Object.freeze(constants);
+constants.pi = 999; // fails silently (no error in non-strict mode)
+console.log(constants.pi); // still 3.14
  
