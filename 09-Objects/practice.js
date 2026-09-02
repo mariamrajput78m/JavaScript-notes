@@ -186,4 +186,6 @@ let students = [
     return student.score >= 50;
   }).length;
 }
+
+console.log("Students passed:", countPassed(students)); // 2
  
