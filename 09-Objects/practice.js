@@ -164,4 +164,11 @@ let constants = { pi: 3.14 };
 Object.freeze(constants);
 constants.pi = 999; // fails silently (no error in non-strict mode)
 console.log(constants.pi); // still 3.14
+
+
+// ---------- 17. CHECKING IF SOMETHING IS AN OBJECT ----------
+console.log(typeof person);        // "object"
+console.log(typeof []);            // "object" -> arrays are technically objects too!
+console.log(Array.isArray(person)); // false -> use this to tell objects and arrays apart
+ 
  
