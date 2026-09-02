@@ -170,5 +170,15 @@ console.log(constants.pi); // still 3.14
 console.log(typeof person);        // "object"
 console.log(typeof []);            // "object" -> arrays are technically objects too!
 console.log(Array.isArray(person)); // false -> use this to tell objects and arrays apart
+
+
+// ---------- 18. MINI PRACTICE PROBLEM ----------
+// Count how many students passed (score >= 50) from a list of student objects
+let students = [
+  { name: "Ali", score: 45 },
+  { name: "Sara", score: 70 },
+  { name: "Bilal", score: 55 },
+  { name: "Zara", score: 30 },
+];
  
  
