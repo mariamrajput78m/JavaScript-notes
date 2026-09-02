@@ -181,4 +181,9 @@ let students = [
   { name: "Zara", score: 30 },
 ];
  
+ function countPassed(list) {
+  return list.filter(function (student) {
+    return student.score >= 50;
+  }).length;
+}
  
