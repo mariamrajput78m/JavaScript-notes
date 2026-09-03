@@ -27,3 +27,21 @@ const subtract = function (a, b) {
   return a - b;
 };
  
+
+// ---------- 3. ARROW FUNCTIONS ----------
+const multiply = (a, b) => {
+  return a * b;
+};
+console.log(multiply(3, 4)); // 12
+ 
+// Shorthand: single expression, no curly braces needed = automatic return
+const square = (n) => n * n;
+console.log(square(5)); // 25
+ 
+// Single parameter - parentheses are optional
+const double = n => n * 2;
+console.log(double(6)); // 12
+ 
+// No parameters - parentheses are required
+const sayHello = () => "Hello!";
+console.log(sayHello());
