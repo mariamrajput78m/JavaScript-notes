@@ -62,3 +62,9 @@ function isEven(num) {
 }
 console.log(isEven(4)); // true
 console.log(isEven(7)); // false
+
+// A function with no return statement gives back undefined
+function noReturn() {
+  let x = 5;
+}
+console.log(noReturn()); // undefined
