@@ -47,3 +47,9 @@ const sayHello = () => "Hello!";
 console.log(sayHello());
 
 
+// ---------- 4. DEFAULT PARAMETERS ----------
+function greetUser(name = "Guest") {
+  return "Welcome, " + name;
+}
+console.log(greetUser());        // "Welcome, Guest" -> no argument passed
+console.log(greetUser("Ali"));   // "Welcome, Ali"
