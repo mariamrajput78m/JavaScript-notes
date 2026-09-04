@@ -45,3 +45,5 @@ console.log(double(6)); // 12
 // No parameters - parentheses are required
 const sayHello = () => "Hello!";
 console.log(sayHello());
+
+
