@@ -53,3 +53,12 @@ function greetUser(name = "Guest") {
 }
 console.log(greetUser());        // "Welcome, Guest" -> no argument passed
 console.log(greetUser("Ali"));   // "Welcome, Ali"
+
+
+// ---------- 5. RETURN VALUES ----------
+function isEven(num) {
+  return num % 2 === 0; // function stops here once it hits return
+  console.log("This never runs"); // unreachable code
+}
+console.log(isEven(4)); // true
+console.log(isEven(7)); // false
