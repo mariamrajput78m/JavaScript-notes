@@ -77,3 +77,14 @@ function sumAll(...numbers) {
 }
 console.log(sumAll(1, 2, 3));       // 6
 console.log(sumAll(1, 2, 3, 4, 5)); // 15
+
+
+// ---------- 7. PASSING FUNCTIONS AS ARGUMENTS (CALLBACKS) ----------
+function processArray(arr, callback) {
+  let result = [];
+  for (let item of arr) {
+    result.push(callback(item));
+  }
+  return result;
+}
+ 
