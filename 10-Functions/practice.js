@@ -88,3 +88,12 @@ function processArray(arr, callback) {
   return result;
 }
  
+let numbers = [1, 2, 3];
+let squared = processArray(numbers, function (n) {
+  return n * n;
+});
+console.log(squared); // [1, 4, 9]
+ 
+// Same thing using an arrow function - very common pattern
+let doubled = processArray(numbers, (n) => n * 2);
+console.log(doubled); // [2, 4, 6]
