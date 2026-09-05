@@ -68,3 +68,12 @@ function noReturn() {
   let x = 5;
 }
 console.log(noReturn()); // undefined
+
+
+// ---------- 6. REST PARAMETERS (accept unlimited arguments) ----------
+function sumAll(...numbers) {
+  // "numbers" becomes a real array inside the function
+  return numbers.reduce((total, n) => total + n, 0);
+}
+console.log(sumAll(1, 2, 3));       // 6
+console.log(sumAll(1, 2, 3, 4, 5)); // 15
