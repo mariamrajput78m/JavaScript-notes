@@ -97,3 +97,4 @@ console.log(squared); // [1, 4, 9]
 // Same thing using an arrow function - very common pattern
 let doubled = processArray(numbers, (n) => n * 2);
 console.log(doubled); // [2, 4, 6]
+
