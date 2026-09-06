@@ -123,3 +123,17 @@ checkScope();
 // console.log(localVar); // would fail - localVar doesn't exist outside the function
 
 
+// ---------- 10. "this" INSIDE REGULAR FUNCTIONS VS ARROW FUNCTIONS ----------
+let obj = {
+  name: "Mariam",
+  regularFunction: function () {
+    console.log(this.name); // "this" = obj, works correctly -> "Mariam"
+  },
+  arrowFunction: () => {
+    console.log(this.name); // "this" is NOT obj here - arrow functions don't bind their own "this"
+  },
+};
+obj.regularFunction(); // "Mariam"
+obj.arrowFunction();   // undefined
+
+
