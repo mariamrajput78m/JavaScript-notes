@@ -121,3 +121,5 @@ function checkScope() {
 }
 checkScope();
 // console.log(localVar); // would fail - localVar doesn't exist outside the function
+
+
