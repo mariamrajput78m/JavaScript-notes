@@ -98,3 +98,26 @@ console.log(squared); // [1, 4, 9]
 let doubled = processArray(numbers, (n) => n * 2);
 console.log(doubled); // [2, 4, 6]
 
+
+// ---------- 8. FUNCTIONS RETURNING FUNCTIONS ----------
+function multiplyBy(factor) {
+  return function (num) {
+    return num * factor;
+  };
+}
+ 
+let triple = multiplyBy(3); // triple is now a function
+console.log(triple(5)); // 15
+console.log(multiplyBy(10)(4)); // 40 - calling it immediately
+
+
+// ---------- 9. SCOPE - WHERE VARIABLES ARE VISIBLE ----------
+let globalVar = "I'm global";
+ 
+function checkScope() {
+  let localVar = "I'm local";
+  console.log(globalVar); // works - can access global from inside
+  console.log(localVar);  // works - defined right here
+}
+checkScope();
+// console.log(localVar); // would fail - localVar doesn't exist outside the function
