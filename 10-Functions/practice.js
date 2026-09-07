@@ -137,6 +137,10 @@ obj.regularFunction(); // "Mariam"
 obj.arrowFunction();   // undefined
 
 
-
+// ---------- 11. IMMEDIATELY INVOKED FUNCTION EXPRESSION (IIFE) ----------
+// Runs once, immediately, and doesn't pollute the outer scope
+(function () {
+  console.log("This runs immediately");
+})();
 
 
