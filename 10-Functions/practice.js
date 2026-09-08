@@ -165,3 +165,6 @@ function isPrime(num) {
   return true;
 }
  
+function getPrimes(numbers) {
+  return numbers.filter(isPrime);
+}
