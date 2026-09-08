@@ -153,3 +153,7 @@ function factorial(n) {
 }
 console.log(factorial(5)); // 120 -> 5 * 4 * 3 * 2 * 1
 
+
+// ---------- 13. MINI PRACTICE PROBLEM ----------
+// Write a function that takes an array of numbers
+// and returns only the ones that are prime
