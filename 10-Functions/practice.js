@@ -144,3 +144,12 @@ obj.arrowFunction();   // undefined
 })();
 
 
+// ---------- 12. RECURSION (a function calling itself) ----------
+function factorial(n) {
+  if (n <= 1) {
+    return 1; // base case - stops the recursion
+  }
+  return n * factorial(n - 1); // calls itself with a smaller value
+}
+console.log(factorial(5)); // 120 -> 5 * 4 * 3 * 2 * 1
+
