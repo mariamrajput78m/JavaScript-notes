@@ -157,3 +157,11 @@ console.log(factorial(5)); // 120 -> 5 * 4 * 3 * 2 * 1
 // ---------- 13. MINI PRACTICE PROBLEM ----------
 // Write a function that takes an array of numbers
 // and returns only the ones that are prime
+function isPrime(num) {
+  if (num < 2) return false;
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) return false;
+  }
+  return true;
+}
+ 
