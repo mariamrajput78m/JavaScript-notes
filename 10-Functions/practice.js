@@ -172,3 +172,5 @@ function getPrimes(numbers) {
 
 let testNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 console.log("Primes:", getPrimes(testNumbers)); // [2, 3, 5, 7]
+
+
