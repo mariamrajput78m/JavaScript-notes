@@ -7,3 +7,14 @@
 for (let i = 0; i < 5; i++) {
   console.log("For loop:", i); // 0, 1, 2, 3, 4
 }
+
+// Counting backwards
+for (let i = 5; i > 0; i--) {
+  console.log("Countdown:", i); // 5, 4, 3, 2, 1
+}
+ 
+// Skipping by more than 1
+for (let i = 0; i <= 10; i += 2) {
+  console.log("Even:", i); // 0, 2, 4, 6, 8, 10
+}
+ 
