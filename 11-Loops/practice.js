@@ -18,3 +18,10 @@ for (let i = 0; i <= 10; i += 2) {
   console.log("Even:", i); // 0, 2, 4, 6, 8, 10
 }
  
+// ---------- 2. WHILE LOOP ----------
+// Checks condition BEFORE running the block
+let count = 0;
+while (count < 5) {
+  console.log("While loop:", count);
+  count++; // must update, or this loops forever
+}
