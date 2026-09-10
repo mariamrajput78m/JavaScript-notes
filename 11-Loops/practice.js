@@ -34,3 +34,12 @@ do {
   console.log("Do-while runs at least once:", x);
   x++;
 } while (x < 5); // condition is false immediately, but block already ran once
+
+
+// ---------- 4. LOOPING THROUGH ARRAYS ----------
+let fruits = ["apple", "banana", "mango"];
+ 
+// classic for loop with index
+for (let i = 0; i < fruits.length; i++) {
+  console.log(i, fruits[i]);
+}
