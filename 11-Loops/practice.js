@@ -25,3 +25,12 @@ while (count < 5) {
   console.log("While loop:", count);
   count++; // must update, or this loops forever
 }
+
+
+// ---------- 3. DO...WHILE LOOP ----------
+// Runs the block ONCE first, THEN checks the condition
+let x = 10;
+do {
+  console.log("Do-while runs at least once:", x);
+  x++;
+} while (x < 5); // condition is false immediately, but block already ran once
