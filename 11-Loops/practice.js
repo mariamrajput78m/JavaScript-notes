@@ -44,3 +44,9 @@ for (let i = 0; i < fruits.length; i++) {
   console.log(i, fruits[i]);
 }
 
+
+// for...of loop - gives you the VALUE directly, no index needed
+for (let fruit of fruits) {
+  console.log("Fruit:", fruit);
+}
+ 
