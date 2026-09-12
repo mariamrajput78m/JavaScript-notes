@@ -50,3 +50,8 @@ for (let fruit of fruits) {
   console.log("Fruit:", fruit);
 }
  
+
+// forEach - array method version
+fruits.forEach(function (fruit, index) {
+  console.log(`${index}: ${fruit}`);
+});
