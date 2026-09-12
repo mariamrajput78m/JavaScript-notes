@@ -55,3 +55,13 @@ for (let fruit of fruits) {
 fruits.forEach(function (fruit, index) {
   console.log(`${index}: ${fruit}`);
 });
+
+
+// ---------- 5. LOOPING THROUGH OBJECTS ----------
+let scores = { math: 90, science: 85, english: 78 };
+ 
+// for...in loop - gives you the KEYS
+for (let subject in scores) {
+  console.log(subject, "->", scores[subject]);
+}
+ 
