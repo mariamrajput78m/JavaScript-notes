@@ -65,3 +65,11 @@ for (let subject in scores) {
   console.log(subject, "->", scores[subject]);
 }
  
+
+// ---------- 6. BREAK (stop the loop entirely) ----------
+for (let i = 0; i < 10; i++) {
+  if (i === 5) {
+    break; // exits the loop completely once i reaches 5
+  }
+  console.log("Break example:", i); // prints 0,1,2,3,4 then stops
+}
