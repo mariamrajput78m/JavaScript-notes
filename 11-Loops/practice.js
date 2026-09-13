@@ -73,3 +73,11 @@ for (let i = 0; i < 10; i++) {
   }
   console.log("Break example:", i); // prints 0,1,2,3,4 then stops
 }
+
+// ---------- 7. CONTINUE (skip this iteration, keep looping) ----------
+for (let i = 0; i < 10; i++) {
+  if (i % 2 === 0) {
+    continue; // skips the rest of THIS iteration, moves to next i
+  }
+  console.log("Odd number:", i); // prints only odd numbers: 1,3,5,7,9
+}
