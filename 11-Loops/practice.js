@@ -81,6 +81,8 @@ for (let i = 0; i < 10; i++) {
   }
   console.log("Odd number:", i); // prints only odd numbers: 1,3,5,7,9
 }
+
+
 // ---------- 8. NESTED LOOPS ----------
 // A loop inside another loop - runs the inner loop fully for each outer step
 for (let i = 1; i <= 3; i++) {
