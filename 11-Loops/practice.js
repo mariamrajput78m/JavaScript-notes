@@ -81,3 +81,4 @@ for (let i = 0; i < 10; i++) {
   }
   console.log("Odd number:", i); // prints only odd numbers: 1,3,5,7,9
 }
+
