@@ -97,3 +97,15 @@ for (let i = 1; i <= 3; i++) {
 // while (i < 5) {
 //   console.log(i); // forgot i++ -> condition never becomes false -> infinite loop
 // }
+
+
+// ---------- 10. LABELED BREAK (breaking out of a NESTED loop) ----------
+// Normally break only exits the innermost loop - labels let you exit an outer one
+outerLoop: for (let i = 0; i < 3; i++) {
+  for (let j = 0; j < 3; j++) {
+    if (i === 1 && j === 1) {
+      break outerLoop; // exits BOTH loops immediately
+    }
+    console.log(`labeled: i=${i}, j=${j}`);
+  }
+}
