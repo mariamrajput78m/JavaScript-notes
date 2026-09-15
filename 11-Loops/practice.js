@@ -91,4 +91,9 @@ for (let i = 1; i <= 3; i++) {
   }
 }
 
-
+// ---------- 9. INFINITE LOOP WARNING ----------
+// This is what causes your browser/program to freeze - AVOID this bug
+// let i = 0;
+// while (i < 5) {
+//   console.log(i); // forgot i++ -> condition never becomes false -> infinite loop
+// }
