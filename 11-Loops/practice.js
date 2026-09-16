@@ -110,4 +110,9 @@ outerLoop: for (let i = 0; i < 3; i++) {
   }
 }
 
-
+// ---------- 11. CHOOSING THE RIGHT LOOP ----------
+// for        -> when you need an index or a specific count
+// for...of   -> when you just need array VALUES, no index needed
+// for...in   -> when looping through OBJECT keys
+// while      -> when you don't know how many times you'll loop in advance
+// do...while -> when the block must run at least once no matter what
