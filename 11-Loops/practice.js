@@ -116,3 +116,11 @@ outerLoop: for (let i = 0; i < 3; i++) {
 // for...in   -> when looping through OBJECT keys
 // while      -> when you don't know how many times you'll loop in advance
 // do...while -> when the block must run at least once no matter what
+
+
+// ---------- 12. MINI PRACTICE PROBLEM ----------
+// Print the FizzBuzz sequence from 1 to 20:
+// - multiples of 3 -> "Fizz"
+// - multiples of 5 -> "Buzz"
+// - multiples of both -> "FizzBuzz"
+// - otherwise -> the number itself
