@@ -12,3 +12,8 @@
 // <ul id="list"><li>Item 1</li><li>Item 2</li></ul>
 // <button id="myButton">Click me</button>
 // <input id="myInput" type="text">
+
+// ---------- 1. SELECTING ELEMENTS ----------
+let title = document.getElementById("title");         // selects ONE element by id
+let description = document.querySelector(".description"); // selects FIRST match (CSS selector)
+let listItems = document.querySelectorAll("li");      // selects ALL matches, returns a NodeList
