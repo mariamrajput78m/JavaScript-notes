@@ -4,3 +4,11 @@
 // NOTE: This file only works when linked inside an actual HTML page
 // (DOM = the browser's live representation of your HTML).
 // Running this file alone in Node.js will NOT work - there's no "document" there.
+
+
+// Example HTML this file assumes exists somewhere on the page:
+// <h1 id="title">Hello</h1>
+// <p class="description">Some text</p>
+// <ul id="list"><li>Item 1</li><li>Item 2</li></ul>
+// <button id="myButton">Click me</button>
+// <input id="myInput" type="text">
