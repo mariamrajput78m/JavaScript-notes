@@ -17,3 +17,8 @@
 let title = document.getElementById("title");         // selects ONE element by id
 let description = document.querySelector(".description"); // selects FIRST match (CSS selector)
 let listItems = document.querySelectorAll("li");      // selects ALL matches, returns a NodeList
+
+
+console.log(title);
+console.log(description);
+console.log(listItems); // NodeList(2) [li, li]
