@@ -22,3 +22,10 @@ let listItems = document.querySelectorAll("li");      // selects ALL matches, re
 console.log(title);
 console.log(description);
 console.log(listItems); // NodeList(2) [li, li]
+
+// ---------- 2. READING / CHANGING TEXT CONTENT ----------
+console.log(title.textContent); // reads current text
+title.textContent = "New Title"; // changes what's displayed
+ 
+// innerHTML lets you insert actual HTML tags (be careful - can be a security risk with user input)
+description.innerHTML = "This is <strong>bold</strong> text";
