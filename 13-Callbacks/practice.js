@@ -40,3 +40,4 @@ input.setAttribute("type", "email");
  
 console.log(input.value); // reads whatever the user typed
 input.value = "default@example.com"; // sets the input's value directly
+
