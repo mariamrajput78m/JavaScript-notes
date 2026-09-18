@@ -29,3 +29,14 @@ title.textContent = "New Title"; // changes what's displayed
  
 // innerHTML lets you insert actual HTML tags (be careful - can be a security risk with user input)
 description.innerHTML = "This is <strong>bold</strong> text";
+
+
+// ---------- 3. CHANGING ATTRIBUTES ----------
+let input = document.getElementById("myInput");
+ 
+console.log(input.getAttribute("type")); // "text"
+input.setAttribute("placeholder", "Type here...");
+input.setAttribute("type", "email");
+ 
+console.log(input.value); // reads whatever the user typed
+input.value = "default@example.com"; // sets the input's value directly
