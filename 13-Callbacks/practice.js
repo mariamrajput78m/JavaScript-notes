@@ -41,3 +41,16 @@ input.setAttribute("type", "email");
 console.log(input.value); // reads whatever the user typed
 input.value = "default@example.com"; // sets the input's value directly
 
+
+
+// ---------- 4. CHANGING STYLES ----------
+title.style.color = "blue";
+title.style.fontSize = "32px";
+title.style.backgroundColor = "yellow";
+
+
+// ---------- 5. WORKING WITH CLASSES ----------
+title.classList.add("highlight");     // adds a class
+title.classList.remove("highlight");  // removes a class
+title.classList.toggle("active");     // adds it if missing, removes it if present
+console.log(title.classList.contains("active")); // true or false
