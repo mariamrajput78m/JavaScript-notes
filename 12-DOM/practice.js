@@ -63,3 +63,7 @@ newItem.textContent = "Item 3";
 let list = document.getElementById("list");
 list.appendChild(newItem); // now it actually shows up on the page
  
+
+// ---------- 7. REMOVING ELEMENTS ----------
+let firstItem = document.querySelector("li");
+firstItem.remove(); // removes it from the page entirely
