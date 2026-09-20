@@ -67,3 +67,10 @@ list.appendChild(newItem); // now it actually shows up on the page
 // ---------- 7. REMOVING ELEMENTS ----------
 let firstItem = document.querySelector("li");
 firstItem.remove(); // removes it from the page entirely
+
+
+// ---------- 8. LOOPING THROUGH A NodeList ----------
+let allItems = document.querySelectorAll("li");
+allItems.forEach(function (item, index) {
+  console.log(index, item.textContent);
+});
