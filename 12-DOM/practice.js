@@ -74,3 +74,4 @@ let allItems = document.querySelectorAll("li");
 allItems.forEach(function (item, index) {
   console.log(index, item.textContent);
 });
+
