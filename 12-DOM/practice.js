@@ -54,3 +54,12 @@ title.classList.add("highlight");     // adds a class
 title.classList.remove("highlight");  // removes a class
 title.classList.toggle("active");     // adds it if missing, removes it if present
 console.log(title.classList.contains("active")); // true or false
+
+
+// ---------- 6. CREATING NEW ELEMENTS ----------
+let newItem = document.createElement("li"); // creates an element, not yet on the page
+newItem.textContent = "Item 3";
+ 
+let list = document.getElementById("list");
+list.appendChild(newItem); // now it actually shows up on the page
+ 
