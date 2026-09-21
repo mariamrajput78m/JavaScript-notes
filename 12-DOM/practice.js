@@ -75,3 +75,10 @@ allItems.forEach(function (item, index) {
   console.log(index, item.textContent);
 });
 
+
+// ---------- 9. EVENT LISTENERS (reacting to user actions) ----------
+let button = document.getElementById("myButton");
+ 
+button.addEventListener("click", function () {
+  console.log("Button was clicked!");
+});
