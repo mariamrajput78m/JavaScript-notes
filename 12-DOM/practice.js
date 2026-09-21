@@ -82,3 +82,9 @@ let button = document.getElementById("myButton");
 button.addEventListener("click", function () {
   console.log("Button was clicked!");
 });
+
+
+// Arrow function version - same thing, more common style
+button.addEventListener("click", () => {
+  alert("You clicked the button!");
+});
