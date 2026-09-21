@@ -88,3 +88,9 @@ button.addEventListener("click", function () {
 button.addEventListener("click", () => {
   alert("You clicked the button!");
 });
+
+// ---------- 10. THE "event" OBJECT ----------
+button.addEventListener("click", function (event) {
+  console.log("Event type:", event.type);   // "click"
+  console.log("Element clicked:", event.target); // the actual element that was clicked
+});
