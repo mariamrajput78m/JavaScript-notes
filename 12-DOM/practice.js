@@ -119,3 +119,4 @@ if (form) {
     console.log("Form submitted without refreshing the page");
   });
 }
+
