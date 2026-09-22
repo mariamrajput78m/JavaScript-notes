@@ -103,3 +103,8 @@ input.addEventListener("input", function () {
  
 input.addEventListener("focus", () => console.log("Input focused"));
 input.addEventListener("blur", () => console.log("Input lost focus"));
+
+ 
+document.addEventListener("keydown", (event) => {
+  console.log("Key pressed:", event.key);
+});
