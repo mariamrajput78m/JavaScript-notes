@@ -94,3 +94,12 @@ button.addEventListener("click", function (event) {
   console.log("Event type:", event.type);   // "click"
   console.log("Element clicked:", event.target); // the actual element that was clicked
 });
+
+
+// ---------- 11. COMMON EVENT TYPES ----------
+input.addEventListener("input", function () {
+  console.log("Current input value:", input.value); // fires on every keystroke
+});
+ 
+input.addEventListener("focus", () => console.log("Input focused"));
+input.addEventListener("blur", () => console.log("Input lost focus"));
