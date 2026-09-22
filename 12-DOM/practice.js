@@ -108,3 +108,14 @@ input.addEventListener("blur", () => console.log("Input lost focus"));
 document.addEventListener("keydown", (event) => {
   console.log("Key pressed:", event.key);
 });
+
+
+// ---------- 12. PREVENTING DEFAULT BEHAVIOR ----------
+// Useful for forms - stops the page from refreshing on submit
+let form = document.querySelector("form");
+if (form) {
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); // page won't reload
+    console.log("Form submitted without refreshing the page");
+  });
+}
