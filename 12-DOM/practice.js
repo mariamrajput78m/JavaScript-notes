@@ -134,3 +134,4 @@ console.log(listElement.parentElement);     // the element that contains it
 // Build a simple counter: clicking the button increases a number on the page
  
 // Assumes HTML: <p id="count">0</p> <button id="increaseBtn">+1</button>
+
