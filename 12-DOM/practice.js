@@ -128,3 +128,9 @@ console.log(listElement.children);        // direct child elements
 console.log(listElement.firstElementChild); // first child
 console.log(listElement.lastElementChild);  // last child
 console.log(listElement.parentElement);     // the element that contains it
+
+
+// ---------- 14. MINI PRACTICE PROBLEM ----------
+// Build a simple counter: clicking the button increases a number on the page
+ 
+// Assumes HTML: <p id="count">0</p> <button id="increaseBtn">+1</button>
