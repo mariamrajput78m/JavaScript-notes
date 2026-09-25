@@ -135,3 +135,13 @@ console.log(listElement.parentElement);     // the element that contains it
  
 // Assumes HTML: <p id="count">0</p> <button id="increaseBtn">+1</button>
 
+let countDisplay = document.getElementById("count");
+let increaseBtn = document.getElementById("increaseBtn");
+let currentCount = 0;
+ 
+if (increaseBtn) {
+  increaseBtn.addEventListener("click", function () {
+    currentCount++;
+    countDisplay.textContent = currentCount;
+  });
+}
