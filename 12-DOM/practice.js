@@ -120,3 +120,11 @@ if (form) {
   });
 }
 
+
+// ---------- 13. TRAVERSING THE DOM (parent/child/sibling) ----------
+let listElement = document.getElementById("list");
+ 
+console.log(listElement.children);        // direct child elements
+console.log(listElement.firstElementChild); // first child
+console.log(listElement.lastElementChild);  // last child
+console.log(listElement.parentElement);     // the element that contains it
