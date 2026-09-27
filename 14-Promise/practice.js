@@ -18,3 +18,9 @@ let myPromise = new Promise(function (resolve, reject) {
 });
  
 console.log(myPromise); // Promise { 'It worked!' } -> already settled
+
+
+// ---------- 2. THE THREE STATES OF A PROMISE ----------
+// pending   -> still working, no result yet
+// fulfilled -> resolve() was called, has a result
+// rejected  -> reject() was called, has an error
