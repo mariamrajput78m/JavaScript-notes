@@ -24,3 +24,4 @@ console.log(myPromise); // Promise { 'It worked!' } -> already settled
 // pending   -> still working, no result yet
 // fulfilled -> resolve() was called, has a result
 // rejected  -> reject() was called, has an error
+
