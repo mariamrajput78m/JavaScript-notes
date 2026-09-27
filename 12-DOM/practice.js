@@ -144,4 +144,5 @@ if (increaseBtn) {
     currentCount++;
     countDisplay.textContent = currentCount;
   });
-}
+}  
+

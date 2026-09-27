@@ -1,0 +1,20 @@
+// ============================================
+// PRACTICE: Promises in JavaScript
+// ============================================
+// A Promise represents a value that isn't ready yet, but will be
+// (or will fail) at some point in the future - usually from something
+// slow like a network request, a timer, or reading a file.
+
+// ---------- 1. CREATING A PROMISE ----------
+// A Promise takes a function with two parameters: resolve and reject
+let myPromise = new Promise(function (resolve, reject) {
+  let success = true;
+ 
+  if (success) {
+    resolve("It worked!");   // call this when the task succeeds
+  } else {
+    reject("It failed!");    // call this when the task fails
+  }
+});
+ 
+console.log(myPromise); // Promise { 'It worked!' } -> already settled
