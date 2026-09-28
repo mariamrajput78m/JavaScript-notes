@@ -65,4 +65,7 @@ fetchUserData(5)
   });
  
 
+  // ---------- 5. CHAINING .then() CALLS ----------
+// Each .then() can return a value that gets passed to the NEXT .then()
+
   
