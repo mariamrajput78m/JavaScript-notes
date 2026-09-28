@@ -44,3 +44,13 @@ myPromise
 function fetchUserData(userId) {
   return new Promise(function (resolve, reject) {
     console.log("Fetching user...");
+
+        setTimeout(function () {
+      if (userId > 0) {
+        resolve({ id: userId, name: "Mariam" }); // simulate successful response
+      } else {
+        reject("Invalid user ID"); // simulate a failed response
+      }
+    }, 1000); // simulate network delay of 1 second
+  });
+}
