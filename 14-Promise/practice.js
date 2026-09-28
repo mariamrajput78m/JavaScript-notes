@@ -39,3 +39,8 @@ myPromise
   .catch(function (error) {
     console.log("Error:", error); // runs if reject() was called
   });
+
+  // ---------- 4. SIMULATING A REAL ASYNC TASK ----------
+function fetchUserData(userId) {
+  return new Promise(function (resolve, reject) {
+    console.log("Fetching user...");
