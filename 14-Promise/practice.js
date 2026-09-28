@@ -30,3 +30,12 @@ let pendingPromise = new Promise(function (resolve) {
 });
 console.log(pendingPromise); // Promise { <pending> } -> hasn't resolved yet at this point
  
+
+// ---------- 3. USING .then() AND .catch() ----------
+myPromise
+  .then(function (result) {
+    console.log("Success:", result); // runs if resolve() was called
+  })
+  .catch(function (error) {
+    console.log("Error:", error); // runs if reject() was called
+  });
