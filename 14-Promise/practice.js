@@ -25,3 +25,8 @@ console.log(myPromise); // Promise { 'It worked!' } -> already settled
 // fulfilled -> resolve() was called, has a result
 // rejected  -> reject() was called, has an error
 
+let pendingPromise = new Promise(function (resolve) {
+  setTimeout(() => resolve("Done after delay"), 1000);
+});
+console.log(pendingPromise); // Promise { <pending> } -> hasn't resolved yet at this point
+ 
