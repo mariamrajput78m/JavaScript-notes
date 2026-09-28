@@ -54,3 +54,13 @@ function fetchUserData(userId) {
     }, 1000); // simulate network delay of 1 second
   });
 }
+
+
+fetchUserData(5)
+  .then(function (user) {
+    console.log("User found:", user);
+  })
+  .catch(function (error) {
+    console.log("Error:", error);
+  });
+ 
