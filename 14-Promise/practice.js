@@ -68,4 +68,17 @@ fetchUserData(5)
   // ---------- 5. CHAINING .then() CALLS ----------
 // Each .then() can return a value that gets passed to the NEXT .then()
 
+fetchUserData(1)
+  .then(function (user) {
+    console.log("Step 1 - got user:", user.name);
+    return user.id; // this value becomes the input to the next .then()
+  })
+  .then(function (id) {
+    console.log("Step 2 - got id:", id);
+    return id * 10;
+  })
+  .then(function (result) {
+    console.log("Step 3 - final result:", result);
+  });
+
   
