@@ -81,4 +81,10 @@ fetchUserData(1)
     console.log("Step 3 - final result:", result);
   });
 
+  // ---------- 6. .finally() (runs no matter what) ----------
+fetchUserData(2)
+  .then((user) => console.log("Got user:", user.name))
+  .catch((error) => console.log("Failed:", error))
+  .finally(() => console.log("Fetch attempt finished - runs either way"));
+ 
   
